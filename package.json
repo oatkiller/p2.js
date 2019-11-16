@@ -12,7 +12,7 @@
   ],
   "main": "./src/p2.js",
   "engines": {
-    "node": "*"
+    "node": "12.13.0"
   },
   "repository": {
     "type": "git",
