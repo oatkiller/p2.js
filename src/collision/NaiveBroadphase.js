@@ -20,6 +20,8 @@ NaiveBroadphase.prototype.constructor = NaiveBroadphase;
  * @method getCollisionPairs
  * @param  {World} world
  * @return {Array}
+ * @memberof NaiveBroadphase
+ * @instance
  */
 NaiveBroadphase.prototype.getCollisionPairs = function(world){
     var bodies = world.bodies,
@@ -49,6 +51,8 @@ NaiveBroadphase.prototype.getCollisionPairs = function(world){
  * @param  {AABB} aabb
  * @param {array} result An array to store resulting bodies in.
  * @return {array}
+ * @memberof NaiveBroadphase
+ * @instance
  */
 NaiveBroadphase.prototype.aabbQuery = function(world, aabb, result){
     result = result || [];
