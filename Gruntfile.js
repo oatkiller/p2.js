@@ -66,7 +66,8 @@ module.exports = function(grunt) {
                 src: ["src/"],
                 options: {
                     destination: "docs",
-                    recurse: true
+                    recurse: true,
+                    verbose: true
                 }
             }
         }
@@ -79,6 +80,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-jsdoc');
+    grunt.loadNpmTasks('grunt-run');
 
     grunt.registerTask('default', ['test','jshint','browserify','concat','uglify','addLicense','requireJsFix']);
     grunt.registerTask('dev', ['test','jshint','browserify','concat']);

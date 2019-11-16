@@ -22,6 +22,7 @@ function AABB(options){
      * The lower bound of the bounding box.
      * @property lowerBound
      * @type {Array}
+     * @access public
      */
     this.lowerBound = options.lowerBound ? vec2.clone(options.lowerBound) : vec2.create();
 
@@ -29,6 +30,7 @@ function AABB(options){
      * The upper bound of the bounding box.
      * @property upperBound
      * @type {Array}
+     * @access public
      */
     this.upperBound = options.upperBound ? vec2.clone(options.upperBound) : vec2.create();
 }
@@ -42,6 +44,7 @@ var tmp = vec2.create();
  * @param {Array} position
  * @param {number} [angle=0]
  * @param {number} [skinSize=0] Some margin to be added to the AABB.
+ * @memberof AABB
  */
 AABB.prototype.setFromPoints = function(points, position, angle, skinSize){
     var l = this.lowerBound,
@@ -99,6 +102,7 @@ AABB.prototype.setFromPoints = function(points, position, angle, skinSize){
  * Copy bounds from an AABB to this AABB
  * @method copy
  * @param  {AABB} aabb
+ * @memberof AABB
  */
 AABB.prototype.copy = function(aabb){
     vec2.copy(this.lowerBound, aabb.lowerBound);
@@ -109,6 +113,7 @@ AABB.prototype.copy = function(aabb){
  * Extend this AABB so that it covers the given AABB too.
  * @method extend
  * @param  {AABB} aabb
+ * @memberof AABB
  */
 AABB.prototype.extend = function(aabb){
     var lower = this.lowerBound,
@@ -136,6 +141,7 @@ AABB.prototype.extend = function(aabb){
  * @method overlaps
  * @param  {AABB} aabb
  * @return {Boolean}
+ * @memberof AABB
  */
 AABB.prototype.overlaps = function(aabb){
     var l1 = this.lowerBound,
@@ -156,6 +162,7 @@ AABB.prototype.overlaps = function(aabb){
  * @method containsPoint
  * @param  {Array} point
  * @return {boolean}
+ * @memberof AABB
  */
 AABB.prototype.containsPoint = function(point){
     var l = this.lowerBound,
@@ -165,7 +172,6 @@ AABB.prototype.containsPoint = function(point){
 
 /**
  * Check if the AABB is hit by a ray.
- * @method overlapsRay
  * @param  {Ray} ray
  * @return {number} -1 if no hit, a number between 0 and 1 if hit, indicating the position between the "from" and "to" points.
  * @example
@@ -178,6 +184,7 @@ AABB.prototype.containsPoint = function(point){
  *         to: [0, 0]
  *     });
  *     var fraction = aabb.overlapsRay(ray); // fraction == 0.5
+ * @memberof AABB
  */
 AABB.prototype.overlapsRay = function(ray){
 
