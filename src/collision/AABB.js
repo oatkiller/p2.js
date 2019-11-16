@@ -45,6 +45,7 @@ var tmp = vec2.create();
  * @param {number} [angle=0]
  * @param {number} [skinSize=0] Some margin to be added to the AABB.
  * @memberof AABB
+ * @instance
  */
 AABB.prototype.setFromPoints = function(points, position, angle, skinSize){
     var l = this.lowerBound,
@@ -103,6 +104,7 @@ AABB.prototype.setFromPoints = function(points, position, angle, skinSize){
  * @method copy
  * @param  {AABB} aabb
  * @memberof AABB
+ * @instance
  */
 AABB.prototype.copy = function(aabb){
     vec2.copy(this.lowerBound, aabb.lowerBound);
@@ -114,6 +116,7 @@ AABB.prototype.copy = function(aabb){
  * @method extend
  * @param  {AABB} aabb
  * @memberof AABB
+ * @instance
  */
 AABB.prototype.extend = function(aabb){
     var lower = this.lowerBound,
@@ -142,6 +145,7 @@ AABB.prototype.extend = function(aabb){
  * @param  {AABB} aabb
  * @return {Boolean}
  * @memberof AABB
+ * @instance
  */
 AABB.prototype.overlaps = function(aabb){
     var l1 = this.lowerBound,
@@ -163,6 +167,7 @@ AABB.prototype.overlaps = function(aabb){
  * @param  {Array} point
  * @return {boolean}
  * @memberof AABB
+ * @instance
  */
 AABB.prototype.containsPoint = function(point){
     var l = this.lowerBound,
@@ -185,6 +190,7 @@ AABB.prototype.containsPoint = function(point){
  *     });
  *     var fraction = aabb.overlapsRay(ray); // fraction == 0.5
  * @memberof AABB
+ * @instance
  */
 AABB.prototype.overlapsRay = function(ray){
 

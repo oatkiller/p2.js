@@ -52,6 +52,8 @@ Broadphase.BOUNDING_CIRCLE = 2;
  * Set the world that we are searching for collision pairs in.
  * @method setWorld
  * @param  {World} world
+ * @memberof Broadphase
+ * @instance
  */
 Broadphase.prototype.setWorld = function(world){
     this.world = world;
@@ -62,6 +64,9 @@ Broadphase.prototype.setWorld = function(world){
  * @method getCollisionPairs
  * @param  {World} world The world to search in.
  * @return {Array} An array of the bodies, ordered in pairs. Example: A result of [a,b,c,d] means that the potential pairs are: (a,b), (c,d).
+ * @memberof Broadphase
+ * @instance
+ * @abstract
  */
 Broadphase.prototype.getCollisionPairs = function(/*world*/){};
 
@@ -71,6 +76,8 @@ Broadphase.prototype.getCollisionPairs = function(/*world*/){};
  * @param  {Body} bodyA
  * @param  {Body} bodyB
  * @return {Boolean}
+ * @memberof Broadphase
+ * @instance
  */
 Broadphase.boundingRadiusCheck = function(bodyA, bodyB){
     var d2 = vec2.squaredDistance(bodyA.position, bodyB.position),
@@ -84,6 +91,8 @@ Broadphase.boundingRadiusCheck = function(bodyA, bodyB){
  * @param  {Body} bodyA
  * @param  {Body} bodyB
  * @return {Boolean}
+ * @memberof Broadphase
+ * @instance
  */
 Broadphase.aabbCheck = function(bodyA, bodyB){
     return bodyA.getAABB().overlaps(bodyB.getAABB());
@@ -95,6 +104,8 @@ Broadphase.aabbCheck = function(bodyA, bodyB){
  * @param  {Body} bodyA
  * @param  {Body} bodyB
  * @return {Boolean}
+ * @memberof Broadphase
+ * @instance
  */
 Broadphase.prototype.boundingVolumeCheck = function(bodyA, bodyB){
     var result;
@@ -118,6 +129,8 @@ Broadphase.prototype.boundingVolumeCheck = function(bodyA, bodyB){
  * @param  {Body} bodyA
  * @param  {Body} bodyB
  * @return {Boolean}
+ * @memberof Broadphase
+ * @instance
  */
 Broadphase.canCollide = function(bodyA, bodyB){
     var KINEMATIC = Body.KINEMATIC;
@@ -165,6 +178,9 @@ Broadphase.SAP = 2;
  * @param  {AABB} aabb
  * @param {array} result An array to store resulting bodies in.
  * @return {array}
+ * @memberof Broadphase
+ * @instance
+ * @abstract
  */
 Broadphase.prototype.aabbQuery = function(/*world, aabb, result*/){
     // To be implemented in subclasses
