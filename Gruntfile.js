@@ -61,16 +61,12 @@ module.exports = function(grunt) {
             }
         },
 
-        yuidoc: {
-            compile: {
-                name: 'p2.js',
-                description: '<%= pkg.description %>',
-                version: '<%= pkg.version %>',
-                url: '<%= pkg.homepage %>',
+        jsdoc: {
+            dist: {
+                src: ["src/"],
                 options: {
-                    outdir : "docs",
-                    paths : ["./src/"],
-                    exclude: ".DS_Store,.svn,CVS,.git,build_rollup_tmp,build_tmp,gl-matrix"
+                    destination: "docs",
+                    recurse: true
                 }
             }
         }
@@ -82,7 +78,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-nodeunit');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-yuidoc');
+    grunt.loadNpmTasks('grunt-jsdoc');
 
     grunt.registerTask('default', ['test','jshint','browserify','concat','uglify','addLicense','requireJsFix']);
     grunt.registerTask('dev', ['test','jshint','browserify','concat']);

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: utils/OverlapKeeperRecordPool.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,49 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: utils/OverlapKeeperRecordPool.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>var OverlapKeeperRecord = require('./OverlapKeeperRecord');
+var Pool = require('./Pool');
 
+module.exports = OverlapKeeperRecordPool;
 
-    <h3> </h3>
+/**
+ * @class
+ */
+function OverlapKeeperRecordPool() {
+	Pool.apply(this, arguments);
+}
+OverlapKeeperRecordPool.prototype = new Pool();
+OverlapKeeperRecordPool.prototype.constructor = OverlapKeeperRecordPool;
 
+/**
+ * @method create
+ * @return {OverlapKeeperRecord}
+ */
+OverlapKeeperRecordPool.prototype.create = function () {
+	return new OverlapKeeperRecord();
+};
 
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+/**
+ * @method destroy
+ * @param {OverlapKeeperRecord} record
+ * @return {OverlapKeeperRecordPool}
+ */
+OverlapKeeperRecordPool.prototype.destroy = function (record) {
+	record.bodyA = record.bodyB = record.shapeA = record.shapeB = null;
+	return this;
+};
+</code></pre>
+        </article>
+    </section>
 
 
 

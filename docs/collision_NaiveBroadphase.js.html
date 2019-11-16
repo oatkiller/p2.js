@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: collision/NaiveBroadphase.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,87 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: collision/NaiveBroadphase.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>var Broadphase = require('../collision/Broadphase');
 
+module.exports = NaiveBroadphase;
 
-    <h3> </h3>
+/**
+ * Naive broadphase implementation. Does N^2 tests.
+ *
+ * @class NaiveBroadphase
+ * @constructor
+ * @extends Broadphase
+ */
+function NaiveBroadphase(){
+    Broadphase.call(this, Broadphase.NAIVE);
+}
+NaiveBroadphase.prototype = new Broadphase();
+NaiveBroadphase.prototype.constructor = NaiveBroadphase;
 
+/**
+ * Get the colliding pairs
+ * @method getCollisionPairs
+ * @param  {World} world
+ * @return {Array}
+ */
+NaiveBroadphase.prototype.getCollisionPairs = function(world){
+    var bodies = world.bodies,
+        result = this.result;
 
+    result.length = 0;
 
+    for(var i=0, Ncolliding=bodies.length; i!==Ncolliding; i++){
+        var bi = bodies[i];
 
+        for(var j=0; j&lt;i; j++){
+            var bj = bodies[j];
 
+            if(Broadphase.canCollide(bi,bj) &amp;&amp; this.boundingVolumeCheck(bi,bj)){
+                result.push(bi,bj);
+            }
+        }
+    }
 
+    return result;
+};
 
+/**
+ * Returns all the bodies within an AABB.
+ * @method aabbQuery
+ * @param  {World} world
+ * @param  {AABB} aabb
+ * @param {array} result An array to store resulting bodies in.
+ * @return {array}
+ */
+NaiveBroadphase.prototype.aabbQuery = function(world, aabb, result){
+    result = result || [];
 
+    var bodies = world.bodies;
+    for(var i = 0; i &lt; bodies.length; i++){
+        var b = bodies[i];
 
+        if(b.aabbNeedsUpdate){
+            b.updateAABB();
+        }
 
-    
+        if(b.aabb.overlaps(aabb)){
+            result.push(b);
+        }
+    }
 
-
-
-
-
+    return result;
+};</code></pre>
+        </article>
+    </section>
 
 
 

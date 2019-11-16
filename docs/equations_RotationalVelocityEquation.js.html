@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: equations/RotationalVelocityEquation.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,49 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: equations/RotationalVelocityEquation.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>var Equation = require("./Equation");
 
+module.exports = RotationalVelocityEquation;
 
-    <h3> </h3>
+/**
+ * Syncs rotational velocity of two bodies, or sets a relative velocity (motor).
+ *
+ * @class RotationalVelocityEquation
+ * @constructor
+ * @extends Equation
+ * @param {Body} bodyA
+ * @param {Body} bodyB
+ */
+function RotationalVelocityEquation(bodyA, bodyB){
+    Equation.call(this, bodyA, bodyB, -Number.MAX_VALUE, Number.MAX_VALUE);
+    this.relativeVelocity = 1;
+    this.ratio = 1;
+}
+RotationalVelocityEquation.prototype = new Equation();
+RotationalVelocityEquation.prototype.constructor = RotationalVelocityEquation;
+RotationalVelocityEquation.prototype.computeB = function(a,b,h){
+    var G = this.G;
+    G[2] = -1;
+    G[5] = this.ratio;
 
+    var GiMf = this.computeGiMf();
+    var GW = this.computeGW();
+    var B = - GW * b - h*GiMf;
 
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+    return B;
+};
+</code></pre>
+        </article>
+    </section>
 
 
 

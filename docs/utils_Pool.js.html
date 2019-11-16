@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: utils/Pool.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,79 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: utils/Pool.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>module.exports = Pool;
 
+/**
+ * Object pooling utility.
+ * @class Pool
+ * @constructor
+ */
+function Pool(options) {
+	options = options || {};
 
-    <h3> </h3>
+	/**
+	 * @property {Array} objects
+	 * @type {Array}
+	 */
+	this.objects = [];
 
+	if(options.size !== undefined){
+		this.resize(options.size);
+	}
+}
 
+/**
+ * @method resize
+ * @param {number} size
+ * @return {Pool} Self, for chaining
+ */
+Pool.prototype.resize = function (size) {
+	var objects = this.objects;
 
+	while (objects.length > size) {
+		objects.pop();
+	}
 
+	while (objects.length &lt; size) {
+		objects.push(this.create());
+	}
 
+	return this;
+};
 
+/**
+ * Get an object from the pool or create a new instance.
+ * @method get
+ * @return {Object}
+ */
+Pool.prototype.get = function () {
+	var objects = this.objects;
+	return objects.length ? objects.pop() : this.create();
+};
 
-
-
-
-    
-
-
-
-
-
+/**
+ * Clean up and put the object back into the pool for later use.
+ * @method release
+ * @param {Object} object
+ * @return {Pool} Self for chaining
+ */
+Pool.prototype.release = function (object) {
+	this.destroy(object);
+	this.objects.push(object);
+	return this;
+};
+</code></pre>
+        </article>
+    </section>
 
 
 

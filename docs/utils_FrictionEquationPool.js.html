@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: utils/FrictionEquationPool.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,49 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: utils/FrictionEquationPool.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>var FrictionEquation = require('../equations/FrictionEquation');
+var Pool = require('./Pool');
 
+module.exports = FrictionEquationPool;
 
-    <h3> </h3>
+/**
+ * @class
+ */
+function FrictionEquationPool() {
+	Pool.apply(this, arguments);
+}
+FrictionEquationPool.prototype = new Pool();
+FrictionEquationPool.prototype.constructor = FrictionEquationPool;
 
+/**
+ * @method create
+ * @return {FrictionEquation}
+ */
+FrictionEquationPool.prototype.create = function () {
+	return new FrictionEquation();
+};
 
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+/**
+ * @method destroy
+ * @param {FrictionEquation} equation
+ * @return {FrictionEquationPool}
+ */
+FrictionEquationPool.prototype.destroy = function (equation) {
+	equation.bodyA = equation.bodyB = null;
+	return this;
+};
+</code></pre>
+        </article>
+    </section>
 
 
 

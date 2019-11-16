@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: utils/ContactEquationPool.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,49 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: utils/ContactEquationPool.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>var ContactEquation = require('../equations/ContactEquation');
+var Pool = require('./Pool');
 
+module.exports = ContactEquationPool;
 
-    <h3> </h3>
+/**
+ * @class
+ */
+function ContactEquationPool() {
+	Pool.apply(this, arguments);
+}
+ContactEquationPool.prototype = new Pool();
+ContactEquationPool.prototype.constructor = ContactEquationPool;
 
+/**
+ * @method create
+ * @return {ContactEquation}
+ */
+ContactEquationPool.prototype.create = function () {
+	return new ContactEquation();
+};
 
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+/**
+ * @method destroy
+ * @param {ContactEquation} equation
+ * @return {ContactEquationPool}
+ */
+ContactEquationPool.prototype.destroy = function (equation) {
+	equation.bodyA = equation.bodyB = null;
+	return this;
+};
+</code></pre>
+        </article>
+    </section>
 
 
 

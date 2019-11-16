@@ -1,0 +1,3741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Class: World</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Class: World</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2><span class="attribs"><span class="type-signature"></span></span>World<span class="signature">(options<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h2>
+        
+            <div class="class-description">World</div>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+    <h2>Constructor</h2>
+    
+
+    
+    <h4 class="name" id="World"><span class="type-signature"></span>new World<span class="signature">(options<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    The dynamics world, where all bodies and constraints live.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>solver</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Solver.html">Solver</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">Defaults to GSSolver.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>gravity</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">Defaults to y=-9.78.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>broadphase</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Broadphase.html">Broadphase</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">Defaults to SAPBroadphase</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>islandSplit</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    true
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="world_World.js.html">world/World.js</a>, <a href="world_World.js.html#line37">line 37</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>var world = new World({
+        gravity: [0, -10],
+        broadphase: new SAPBroadphase()
+    });
+    world.addBody(new Body());</code></pre>
+
+
+
+    
+    </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="EventEmitter.html">EventEmitter</a></li>
+    </ul>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id=".BODY_SLEEPING"><span class="type-signature">(static) </span>BODY_SLEEPING<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    Deactivate individual bodies if they are sleepy.
+</div>
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>BODY_SLEEPING</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="world_World.js.html">world/World.js</a>, <a href="world_World.js.html#line363">line 363</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id=".ISLAND_SLEEPING"><span class="type-signature">(static) </span>ISLAND_SLEEPING<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    Deactivates bodies that are in contact, if all of them are sleepy. Note that you must enable {{#crossLink "World/islandSplit:property"}}.islandSplit{{/crossLink}} for this to work.
+</div>
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>ISLAND_SLEEPING</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="world_World.js.html">world/World.js</a>, <a href="world_World.js.html#line370">line 370</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id=".NO_SLEEPING"><span class="type-signature">(static) </span>NO_SLEEPING<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    Never deactivate bodies.
+</div>
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>NO_SLEEPING</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="world_World.js.html">world/World.js</a>, <a href="world_World.js.html#line356">line 356</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="applyDamping"><span class="type-signature"></span>applyDamping<span class="type-signature"> :Boolean</span></h4>
+
+
+
+
+<div class="description">
+    Enable to automatically apply body damping each step.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>applyDamping</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>true</li>
+        </ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="world_World.js.html">world/World.js</a>, <a href="world_World.js.html#line158">line 158</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="applyGravity"><span class="type-signature"></span>applyGravity<span class="type-signature"> :Boolean</span></h4>
+
+
+
+
+<div class="description">
+    Enable to automatically apply gravity each step.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>applyGravity</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>true</li>
+        </ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="world_World.js.html">world/World.js</a>, <a href="world_World.js.html#line166">line 166</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="applySpringForces"><span class="type-signature"></span>applySpringForces<span class="type-signature"> :Boolean</span></h4>
+
+
+
+
+<div class="description">
+    Enable to automatically apply spring forces each step.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>applySpringForces</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>true</li>
+        </ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="world_World.js.html">world/World.js</a>, <a href="world_World.js.html#line150">line 150</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="bodies"><span class="type-signature"></span>bodies<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    All bodies in the world. To add a body to the world, use {{#crossLink "World/addBody:method"}}{{/crossLink}}.
+</div>
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>bodies</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="world_World.js.html">world/World.js</a>, <a href="world_World.js.html#line54">line 54</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="broadphase"><span class="type-signature"></span>broadphase<span class="type-signature"> :<a href="Broadphase.html">Broadphase</a></span></h4>
+
+
+
+
+<div class="description">
+    The broadphase algorithm to use.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="Broadphase.html">Broadphase</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>broadphase</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="world_World.js.html">world/World.js</a>, <a href="world_World.js.html#line114">line 114</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="constraints"><span class="type-signature"></span>constraints<span class="type-signature"> :Array</span></h4>
+
+
+
+
+<div class="description">
+    User-added constraints.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Array</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>constraints</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="world_World.js.html">world/World.js</a>, <a href="world_World.js.html#line123">line 123</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="contactMaterials"><span class="type-signature"></span>contactMaterials<span class="type-signature"> :Array</span></h4>
+
+
+
+
+<div class="description">
+    The ContactMaterials added to the World.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Array</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>contactMaterials</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="world_World.js.html">world/World.js</a>, <a href="world_World.js.html#line181">line 181</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="defaultContactMaterial"><span class="type-signature"></span>defaultContactMaterial<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    The default contact material to use, if no contact material was set for the colliding materials.
+</div>
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>defaultContactMaterial</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="ContactMaterial.html">ContactMaterial</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="world_World.js.html">world/World.js</a>, <a href="world_World.js.html#line135">line 135</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="defaultMaterial"><span class="type-signature"></span>defaultMaterial<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    Dummy default material in the world, used in .defaultContactMaterial
+</div>
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>defaultMaterial</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Material.html">Material</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="world_World.js.html">world/World.js</a>, <a href="world_World.js.html#line129">line 129</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="emitImpactEvent"><span class="type-signature"></span>emitImpactEvent<span class="type-signature"> :Boolean</span></h4>
+
+
+
+
+<div class="description">
+    Set to true if you want to the world to emit the "impact" event. Turning this off could improve performance.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>emitImpactEvent</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <dt class="important tag-deprecated">Deprecated:</dt><dd><ul class="dummy"><li>Impact event will be removed. Use beginContact instead.</li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>true</li>
+        </ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="world_World.js.html">world/World.js</a>, <a href="world_World.js.html#line211">line 211</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="frictionGravity"><span class="type-signature"></span>frictionGravity<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    Gravity to use when approximating the friction max force (mu*mass*gravity).
+</div>
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>frictionGravity</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="world_World.js.html">world/World.js</a>, <a href="world_World.js.html#line92">line 92</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="gravity"><span class="type-signature"></span>gravity<span class="type-signature"> :Array</span></h4>
+
+
+
+
+<div class="description">
+    Gravity in the world. This is applied on all bodies in the beginning of each step().
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Array</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>gravity</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="world_World.js.html">world/World.js</a>, <a href="world_World.js.html#line83">line 83</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="islandSplit"><span class="type-signature"></span>islandSplit<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    Whether to enable island splitting. Island splitting can be an advantage for both precision and performance.
+</div>
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>islandSplit</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>false</li>
+        </ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="world_World.js.html">world/World.js</a>, <a href="world_World.js.html#line202">line 202</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="lastTimeStep"><span class="type-signature"></span>lastTimeStep<span class="type-signature"> :Number</span></h4>
+
+
+
+
+<div class="description">
+    For keeping track of what time step size we used last step
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Number</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>lastTimeStep</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="world_World.js.html">world/World.js</a>, <a href="world_World.js.html#line142">line 142</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="narrowphase"><span class="type-signature"></span>narrowphase<span class="type-signature"> :<a href="Narrowphase.html">Narrowphase</a></span></h4>
+
+
+
+
+<div class="description">
+    The narrowphase to use to generate contacts.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="Narrowphase.html">Narrowphase</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>narrowphase</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="world_World.js.html">world/World.js</a>, <a href="world_World.js.html#line75">line 75</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="overlapKeeper"><span class="type-signature"></span>overlapKeeper<span class="type-signature"></span></h4>
+
+
+
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>overlapKeeper</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="OverlapKeeper.html">OverlapKeeper</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="world_World.js.html">world/World.js</a>, <a href="world_World.js.html#line234">line 234</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="sleepMode"><span class="type-signature"></span>sleepMode<span class="type-signature"> :number</span></h4>
+
+
+
+
+<div class="description">
+    How to deactivate bodies during simulation. Possible modes are: {{#crossLink "World/NO_SLEEPING:property"}}World.NO_SLEEPING{{/crossLink}}, {{#crossLink "World/BODY_SLEEPING:property"}}World.BODY_SLEEPING{{/crossLink}} and {{#crossLink "World/ISLAND_SLEEPING:property"}}World.ISLAND_SLEEPING{{/crossLink}}.
+If sleeping is enabled, you might need to {{#crossLink "Body/wakeUp:method"}}wake up{{/crossLink}} the bodies if they fall asleep when they shouldn't. If you want to enable sleeping in the world, but want to disable it for a particular body, see {{#crossLink "Body/allowSleep:property"}}Body.allowSleep{{/crossLink}}.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">number</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>sleepMode</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>World.NO_SLEEPING</li>
+        </ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="world_World.js.html">world/World.js</a>, <a href="world_World.js.html#line220">line 220</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="solveConstraints"><span class="type-signature"></span>solveConstraints<span class="type-signature"> :Boolean</span></h4>
+
+
+
+
+<div class="description">
+    Enable/disable constraint solving in each step.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>solveConstraints</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>true</li>
+        </ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="world_World.js.html">world/World.js</a>, <a href="world_World.js.html#line174">line 174</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="solver"><span class="type-signature"></span>solver<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    The solver used to satisfy constraints and contacts. Default is {{#crossLink "GSSolver"}}{{/crossLink}}.
+</div>
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>solver</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Solver.html">Solver</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="world_World.js.html">world/World.js</a>, <a href="world_World.js.html#line67">line 67</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="springs"><span class="type-signature"></span>springs<span class="type-signature"> :Array</span></h4>
+
+
+
+
+<div class="description">
+    All springs in the world. To add a spring to the world, use {{#crossLink "World/addSpring:method"}}{{/crossLink}}.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Array</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>springs</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="world_World.js.html">world/World.js</a>, <a href="world_World.js.html#line48">line 48</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="stepping"><span class="type-signature"></span>stepping<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    Is true during step().
+</div>
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>stepping</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="world_World.js.html">world/World.js</a>, <a href="world_World.js.html#line195">line 195</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="time"><span class="type-signature"></span>time<span class="type-signature"> :Number</span></h4>
+
+
+
+
+<div class="description">
+    World time.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Number</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>time</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="world_World.js.html">world/World.js</a>, <a href="world_World.js.html#line188">line 188</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="unionFind"><span class="type-signature"></span>unionFind<span class="type-signature"></span></h4>
+
+
+
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>unionFind</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="UnionFind.html">UnionFind</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="world_World.js.html">world/World.js</a>, <a href="world_World.js.html#line225">line 225</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="useFrictionGravityOnZeroGravity"><span class="type-signature"></span>useFrictionGravityOnZeroGravity<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    If the length of .gravity is zero, and .useWorldGravityAsFrictionGravity=true, then switch to using .frictionGravity for friction instead. This fallback is useful for gravityless games.
+</div>
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>useFrictionGravityOnZeroGravity</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>true</li>
+        </ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="world_World.js.html">world/World.js</a>, <a href="world_World.js.html#line106">line 106</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="useWorldGravityAsFrictionGravity"><span class="type-signature"></span>useWorldGravityAsFrictionGravity<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    Set to true if you want .frictionGravity to be automatically set to the length of .gravity.
+</div>
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>useWorldGravityAsFrictionGravity</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>true</li>
+        </ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="world_World.js.html">world/World.js</a>, <a href="world_World.js.html#line99">line 99</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="AABB.html">AABB</a></li><li><a href="AngleLockEquation.html">AngleLockEquation</a></li><li><a href="Body.html">Body</a></li><li><a href="Box.html">Box</a></li><li><a href="Broadphase.html">Broadphase</a></li><li><a href="Capsule.html">Capsule</a></li><li><a href="Circle.html">Circle</a></li><li><a href="Constraint.html">Constraint</a></li><li><a href="ContactEquation.html">ContactEquation</a></li><li><a href="ContactEquationPool.html">ContactEquationPool</a></li><li><a href="ContactMaterial.html">ContactMaterial</a></li><li><a href="Convex.html">Convex</a></li><li><a href="DistanceConstraint.html">DistanceConstraint</a></li><li><a href="Equation.html">Equation</a></li><li><a href="EventEmitter.html">EventEmitter</a></li><li><a href="FrictionEquation.html">FrictionEquation</a></li><li><a href="FrictionEquationPool.html">FrictionEquationPool</a></li><li><a href="GearConstraint.html">GearConstraint</a></li><li><a href="GSSolver.html">GSSolver</a></li><li><a href="Heightfield.html">Heightfield</a></li><li><a href="Line.html">Line</a></li><li><a href="LinearSpring.html">LinearSpring</a></li><li><a href="LockConstraint.html">LockConstraint</a></li><li><a href="Material.html">Material</a></li><li><a href="NaiveBroadphase.html">NaiveBroadphase</a></li><li><a href="Narrowphase.html">Narrowphase</a></li><li><a href="OverlapKeeper.html">OverlapKeeper</a></li><li><a href="OverlapKeeperRecord.html">OverlapKeeperRecord</a></li><li><a href="OverlapKeeperRecordPool.html">OverlapKeeperRecordPool</a></li><li><a href="Particle.html">Particle</a></li><li><a href="Plane.html">Plane</a></li><li><a href="Pool.html">Pool</a></li><li><a href="PrismaticConstraint.html">PrismaticConstraint</a></li><li><a href="Ray.html">Ray</a></li><li><a href="RaycastResult.html">RaycastResult</a></li><li><a href="RevoluteConstraint.html">RevoluteConstraint</a></li><li><a href="RotationalLockEquation.html">RotationalLockEquation</a></li><li><a href="RotationalSpring.html">RotationalSpring</a></li><li><a href="RotationalVelocityEquation.html">RotationalVelocityEquation</a></li><li><a href="SAPBroadphase.html">SAPBroadphase</a></li><li><a href="Shape.html">Shape</a></li><li><a href="Solver.html">Solver</a></li><li><a href="Spring.html">Spring</a></li><li><a href="TopDownVehicle.html">TopDownVehicle</a></li><li><a href="TupleDictionary.html">TupleDictionary</a></li><li><a href="UnionFind.html">UnionFind</a></li><li><a href="Utils.html">Utils</a></li><li><a href="vec2.html">vec2</a></li><li><a href="WheelConstraint.html">WheelConstraint</a></li><li><a href="World.html">World</a></li></ul><h3>Events</h3><ul><li><a href="global.html#event:addBody">addBody</a></li><li><a href="global.html#event:addSpring">addSpring</a></li><li><a href="global.html#event:beginContact">beginContact</a></li><li><a href="global.html#event:endContact">endContact</a></li><li><a href="global.html#event:impact">impact</a></li><li><a href="global.html#event:postBroadphase">postBroadphase</a></li><li><a href="global.html#event:postStep">postStep</a></li><li><a href="global.html#event:preSolve">preSolve</a></li><li><a href="global.html#event:removeBody">removeBody</a></li><li><a href="global.html#event:sleep">sleep</a></li><li><a href="global.html#event:sleepy">sleepy</a></li><li><a href="global.html#event:wakeup">wakeup</a></li></ul><h3>Global</h3><ul><li><a href="global.html#aabbCheck">aabbCheck</a></li><li><a href="global.html#aabbQuery">aabbQuery</a></li><li><a href="global.html">add</a></li><li><a href="global.html#addBody">addBody</a></li><li><a href="global.html#addConstraint">addConstraint</a></li><li><a href="global.html#addContactMaterial">addContactMaterial</a></li><li><a href="global.html#addEquation">addEquation</a></li><li><a href="global.html#addEquations">addEquations</a></li><li><a href="global.html#addShape">addShape</a></li><li><a href="global.html#addSpring">addSpring</a></li><li><a href="global.html#addToWlambda">addToWlambda</a></li><li><a href="global.html#addToWorld">addToWorld</a></li><li><a href="global.html#addWheel">addWheel</a></li><li><a href="global.html#adjustCenterOfMass">adjustCenterOfMass</a></li><li><a href="global.html">appendArray</a></li><li><a href="global.html#applyDamping">applyDamping</a></li><li><a href="global.html#applyForce">applyForce</a></li><li><a href="global.html#applyForceLocal">applyForceLocal</a></li><li><a href="global.html#applyImpulse">applyImpulse</a></li><li><a href="global.html#applyImpulseLocal">applyImpulseLocal</a></li><li><a href="global.html">arrayRemove</a></li><li><a href="global.html#bodiesAreOverlapping">bodiesAreOverlapping</a></li><li><a href="global.html#bodiesOverlap">bodiesOverlap</a></li><li><a href="global.html#boundingRadiusCheck">boundingRadiusCheck</a></li><li><a href="global.html#boundingVolumeCheck">boundingVolumeCheck</a></li><li><a href="global.html#canCollide">canCollide</a></li><li><a href="global.html#capsuleCapsule">capsuleCapsule</a></li><li><a href="global.html">centroid</a></li><li><a href="global.html#circleCapsule">circleCapsule</a></li><li><a href="global.html#circleCircle">circleCircle</a></li><li><a href="global.html#circleConvex">circleConvex</a></li><li><a href="global.html#circleHeightfield">circleHeightfield</a></li><li><a href="global.html#circleLine">circleLine</a></li><li><a href="global.html#circleParticle">circleParticle</a></li><li><a href="global.html#circlePlane">circlePlane</a></li><li><a href="global.html#clear">clear</a></li><li><a href="global.html">clone</a></li><li><a href="global.html#collidedLastStep">collidedLastStep</a></li><li><a href="global.html#computeAABB">computeAABB</a></li><li><a href="global.html#computeB">computeB</a></li><li><a href="global.html#computeGiMf">computeGiMf</a></li><li><a href="global.html#computeGiMGt">computeGiMGt</a></li><li><a href="global.html#computeGq">computeGq</a></li><li><a href="global.html#computeGW">computeGW</a></li><li><a href="global.html#computeGWlambda">computeGWlambda</a></li><li><a href="global.html#computeInvC">computeInvC</a></li><li><a href="global.html#computeMomentOfInertia">computeMomentOfInertia</a></li><li><a href="global.html#conputeMomentOfInertia">conputeMomentOfInertia</a></li><li><a href="global.html#containsPoint">containsPoint</a></li><li><a href="global.html#convexCapsule">convexCapsule</a></li><li><a href="global.html#convexConvex">convexConvex</a></li><li><a href="global.html#convexLine">convexLine</a></li><li><a href="global.html#copy">copy</a></li><li><a href="global.html#create">create</a></li><li><a href="global.html#createContactEquation">createContactEquation</a></li><li><a href="global.html#createFrictionEquation">createFrictionEquation</a></li><li><a href="global.html#createFrictionFromContact">createFrictionFromContact</a></li><li><a href="global.html">crossLength</a></li><li><a href="global.html">crossVZ</a></li><li><a href="global.html">crossZV</a></li><li><a href="global.html">defaults</a></li><li><a href="global.html#destroy">destroy</a></li><li><a href="global.html#disableBodyCollision">disableBodyCollision</a></li><li><a href="global.html#disableMotor">disableMotor</a></li><li><a href="global.html">distance</a></li><li><a href="global.html">divide</a></li><li><a href="global.html">dot</a></li><li><a href="global.html#emit">emit</a></li><li><a href="global.html#enableBodyCollision">enableBodyCollision</a></li><li><a href="global.html#enableMotor">enableMotor</a></li><li><a href="global.html">extend</a></li><li><a href="global.html#find">find</a></li><li><a href="global.html#fromPolygon">fromPolygon</a></li><li><a href="global.html">fromValues</a></li><li><a href="global.html#get">get</a></li><li><a href="global.html#getAABB">getAABB</a></li><li><a href="global.html#getArea">getArea</a></li><li><a href="global.html#getBodyById">getBodyById</a></li><li><a href="global.html#getByKey">getByKey</a></li><li><a href="global.html#getCollisionPairs">getCollisionPairs</a></li><li><a href="global.html#getContactMaterial">getContactMaterial</a></li><li><a href="global.html#getHitDistance">getHitDistance</a></li><li><a href="global.html#getHitPoint">getHitPoint</a></li><li><a href="global.html#getKey">getKey</a></li><li><a href="global.html#getLineSegment">getLineSegment</a></li><li><a href="global.html">getLineSegmentsIntersection</a></li><li><a href="global.html">getLineSegmentsIntersectionFraction</a></li><li><a href="global.html#getMaxForce">getMaxForce</a></li><li><a href="global.html#getMaxTorque">getMaxTorque</a></li><li><a href="global.html#getMotorSpeed">getMotorSpeed</a></li><li><a href="global.html#getSlipForce">getSlipForce</a></li><li><a href="global.html#getSpeed">getSpeed</a></li><li><a href="global.html#getVelocityAlongNormal">getVelocityAlongNormal</a></li><li><a href="global.html#getVelocityAtPoint">getVelocityAtPoint</a></li><li><a href="global.html#getWorldAnchorA">getWorldAnchorA</a></li><li><a href="global.html#getWorldAnchorB">getWorldAnchorB</a></li><li><a href="global.html#gmult">gmult</a></li><li><a href="global.html#has">has</a></li><li><a href="global.html#hasHit">hasHit</a></li><li><a href="global.html#hitTest">hitTest</a></li><li><a href="global.html#integrate">integrate</a></li><li><a href="global.html#intersectBodies">intersectBodies</a></li><li><a href="global.html">length</a></li><li><a href="global.html">lerp</a></li><li><a href="global.html#lineBox">lineBox</a></li><li><a href="global.html#lineCapsule">lineCapsule</a></li><li><a href="global.html#lineLine">lineLine</a></li><li><a href="global.html#motorEnabled">motorEnabled</a></li><li><a href="global.html#motorIsEnabled">motorIsEnabled</a></li><li><a href="global.html#motorMaxForce">motorMaxForce</a></li><li><a href="global.html#motorSpeed">motorSpeed</a></li><li><a href="global.html">multiply</a></li><li><a href="global.html">negate</a></li><li><a href="global.html">normalize</a></li><li><a href="global.html#off">off</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#overlaps">overlaps</a></li><li><a href="global.html#overlapsRay">overlapsRay</a></li><li><a href="global.html#particleConvex">particleConvex</a></li><li><a href="global.html#particlePlane">particlePlane</a></li><li><a href="global.html#planeCapsule">planeCapsule</a></li><li><a href="global.html#planeConvex">planeConvex</a></li><li><a href="global.html#planeLine">planeLine</a></li><li><a href="global.html#pointTest">pointTest</a></li><li><a href="global.html">projectOntoAxis</a></li><li><a href="global.html#raycast">raycast</a></li><li><a href="global.html">reflect</a></li><li><a href="global.html#release">release</a></li><li><a href="global.html#removeAllEquations">removeAllEquations</a></li><li><a href="global.html#removeBody">removeBody</a></li><li><a href="global.html#removeConstraint">removeConstraint</a></li><li><a href="global.html#removeContactMaterial">removeContactMaterial</a></li><li><a href="global.html#removeEquation">removeEquation</a></li><li><a href="global.html#removeFromWorld">removeFromWorld</a></li><li><a href="global.html#removeShape">removeShape</a></li><li><a href="global.html#removeSpring">removeSpring</a></li><li><a href="global.html#reset">reset</a></li><li><a href="global.html#resize">resize</a></li><li><a href="global.html">rotate</a></li><li><a href="global.html">rotate90cw</a></li><li><a href="global.html">scale</a></li><li><a href="global.html#set">set</a></li><li><a href="global.html#setBrakeForce">setBrakeForce</a></li><li><a href="global.html#setDensity">setDensity</a></li><li><a href="global.html#setFromPoints">setFromPoints</a></li><li><a href="global.html#setGlobalRelaxation">setGlobalRelaxation</a></li><li><a href="global.html#setGlobalStiffness">setGlobalStiffness</a></li><li><a href="global.html#setLimits">setLimits</a></li><li><a href="global.html#setMaxBias">setMaxBias</a></li><li><a href="global.html#setMaxForce">setMaxForce</a></li><li><a href="global.html#setMaxTorque">setMaxTorque</a></li><li><a href="global.html#setMotorSpeed">setMotorSpeed</a></li><li><a href="global.html#setOverlapping">setOverlapping</a></li><li><a href="global.html#setRatio">setRatio</a></li><li><a href="global.html#setRelaxation">setRelaxation</a></li><li><a href="global.html#setSideFriction">setSideFriction</a></li><li><a href="global.html#setSlipForce">setSlipForce</a></li><li><a href="global.html#setStiffness">setStiffness</a></li><li><a href="global.html#setWorld">setWorld</a></li><li><a href="global.html#setWorldAnchorA">setWorldAnchorA</a></li><li><a href="global.html#setWorldAnchorB">setWorldAnchorB</a></li><li><a href="global.html#setZeroForce">setZeroForce</a></li><li><a href="global.html">shallowClone</a></li><li><a href="global.html#sleep">sleep</a></li><li><a href="global.html#sleepTick">sleepTick</a></li><li><a href="global.html#solve">solve</a></li><li><a href="global.html#sortEquations">sortEquations</a></li><li><a href="global.html">splice</a></li><li><a href="global.html">squaredDistance</a></li><li><a href="global.html">squaredLength</a></li><li><a href="global.html#step">step</a></li><li><a href="global.html#stop">stop</a></li><li><a href="global.html">str</a></li><li><a href="global.html">subtract</a></li><li><a href="global.html#tick">tick</a></li><li><a href="global.html#toGlobalFrame">toGlobalFrame</a></li><li><a href="global.html#toLocalFrame">toLocalFrame</a></li><li><a href="global.html#toWorldFrame">toWorldFrame</a></li><li><a href="global.html">triangleArea</a></li><li><a href="global.html#union">union</a></li><li><a href="global.html#update">update</a></li><li><a href="global.html#updateAABB">updateAABB</a></li><li><a href="global.html#updateArea">updateArea</a></li><li><a href="global.html#updateBoundingRadius">updateBoundingRadius</a></li><li><a href="global.html#updateCenterOfMass">updateCenterOfMass</a></li><li><a href="global.html#updateMassProperties">updateMassProperties</a></li><li><a href="global.html#updateMaxMinValues">updateMaxMinValues</a></li><li><a href="global.html#updateTriangles">updateTriangles</a></li><li><a href="global.html#vectorToGlobalFrame">vectorToGlobalFrame</a></li><li><a href="global.html#vectorToLocalFrame">vectorToLocalFrame</a></li><li><a href="global.html#vectorToWorldFrame">vectorToWorldFrame</a></li><li><a href="global.html#wakeUp">wakeUp</a></li><li><a href="global.html#worldPointToLocal">worldPointToLocal</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Sat Nov 16 2019 14:13:31 GMT-0500 (Eastern Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

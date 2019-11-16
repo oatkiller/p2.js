@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: material/Material.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,45 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: material/Material.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>module.exports = Material;
 
+/**
+ * Defines a physics material. To be used with {{#crossLink "ContactMaterial"}}{{/crossLink}}.
+ * @class Material
+ * @constructor
+ * @author schteppe
+ * @example
+ *     // Create a wooden box
+ *     var woodMaterial = new Material();
+ *     var boxShape = new Box({
+ *         material: woodMaterial
+ *     });
+ *     body.addShape(boxShape);
+ */
+function Material(){
 
-    <h3> </h3>
+    /**
+     * The material identifier. Read only.
+     * @readonly
+     * @property id
+     * @type {Number}
+     */
+    this.id = Material.idCounter++;
+}
 
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+Material.idCounter = 0;
+</code></pre>
+        </article>
+    </section>
 
 
 

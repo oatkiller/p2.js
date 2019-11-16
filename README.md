@@ -178,7 +178,7 @@ List all tasks using ```grunt --help```.
 grunt        # Run tests, build, minify
 grunt dev    # Run tests, build
 grunt test   # Run tests
-grunt yuidoc # Build docs
+grunt jsdoc # Build docs
 grunt watch  # Watch for changes and run the "dev" task
 ```
 
