@@ -130,6 +130,8 @@ var bodiesOverlap_shapePositionB = createVec2();
  * @param  {Body} bodyB
  * @param  {boolean} [checkCollisionMasks=false]
  * @return {Boolean}
+ * @memberof Narrowphase
+ * @instance
  */
 Narrowphase.prototype.bodiesOverlap = function(bodyA, bodyB, checkCollisionMasks){
     var shapePositionA = bodiesOverlap_shapePositionA;
@@ -195,6 +197,8 @@ Narrowphase.prototype.bodiesOverlap = function(bodyA, bodyB, checkCollisionMasks
  * @param  {Body} bodyA
  * @param  {Body} bodyB
  * @return {Boolean}
+ * @memberof Narrowphase
+ * @instance
  */
 Narrowphase.prototype.collidedLastStep = function(bodyA, bodyB){
     var id1 = bodyA.id|0,
@@ -205,6 +209,8 @@ Narrowphase.prototype.collidedLastStep = function(bodyA, bodyB){
 /**
  * Throws away the old equations and gets ready to create new
  * @method reset
+ * @memberof Narrowphase
+ * @instance
  */
 Narrowphase.prototype.reset = function(){
     this.collidingBodiesLastStep.reset();
@@ -237,6 +243,8 @@ Narrowphase.prototype.reset = function(){
  * @param  {Body} bodyA
  * @param  {Body} bodyB
  * @return {ContactEquation}
+ * @memberof Narrowphase
+ * @instance
  */
 Narrowphase.prototype.createContactEquation = function(bodyA, bodyB, shapeA, shapeB){
     var c = this.contactEquationPool.get();
@@ -264,6 +272,8 @@ Narrowphase.prototype.createContactEquation = function(bodyA, bodyB, shapeA, sha
  * @param  {Body} bodyA
  * @param  {Body} bodyB
  * @return {FrictionEquation}
+ * @memberof Narrowphase
+ * @instance
  */
 Narrowphase.prototype.createFrictionEquation = function(bodyA, bodyB, shapeA, shapeB){
     var c = this.frictionEquationPool.get();
@@ -290,6 +300,8 @@ Narrowphase.prototype.createFrictionEquation = function(bodyA, bodyB, shapeA, sh
  * @method createFrictionFromContact
  * @param  {ContactEquation} contactEquation
  * @return {FrictionEquation}
+ * @memberof Narrowphase
+ * @instance
  */
 Narrowphase.prototype.createFrictionFromContact = function(c){
     var eq = this.createFrictionEquation(c.bodyA, c.bodyB, c.shapeA, c.shapeB);
@@ -300,7 +312,11 @@ Narrowphase.prototype.createFrictionFromContact = function(c){
     return eq;
 };
 
-// Take the average N latest contact point on the plane.
+/**
+ * Take the average N latest contact point on the plane.
+ * @memberof Narrowphase
+ * @instance
+ */
 Narrowphase.prototype.createFrictionFromAverage = function(numContacts){
     var c = this.contactEquations[this.contactEquations.length - 1];
     var eq = this.createFrictionEquation(c.bodyA, c.bodyB, c.shapeA, c.shapeB);
@@ -341,9 +357,13 @@ Narrowphase.prototype.createFrictionFromAverage = function(numContacts){
  * @param  {Line}       lineShape
  * @param  {Array}      lineOffset
  * @param  {Number}     lineAngle
- * @param {boolean}     justTest
+ * @param {boolean}     justTest - If `true` then the return value will be 0 or 1 instead of the number of contacts
  * @return {number}
- * @todo Implement me!
+ * @todo Try to remove this
+ * @memberof Narrowphase
+ * @instance
+ * @private
+ * @deprecated
  */
 Narrowphase.prototype[Shape.CONVEX | Shape.LINE] =
 Narrowphase.prototype.convexLine = function(
@@ -374,9 +394,12 @@ Narrowphase.prototype.convexLine = function(
  * @param  {Box}  boxShape
  * @param  {Array}      boxOffset
  * @param  {Number}     boxAngle
- * @param  {Boolean}    justTest
+ * @param {boolean}     justTest - If `true` then the return value will be 0 or 1 instead of the number of contacts
  * @return {number}
- * @todo Implement me!
+ * @memberof Narrowphase
+ * @instance
+ * @todo Try to remove this
+ * @deprecated
  */
 Narrowphase.prototype[Shape.LINE | Shape.BOX] =
 Narrowphase.prototype.lineBox = function(
@@ -420,7 +443,10 @@ var convexCapsule_tempRect = new Box({ width: 1, height: 1 }),
  * @param  {Capsule}    capsuleShape
  * @param  {Array}      capsulePosition
  * @param  {Number}     capsuleAngle
+ * @param {boolean}     justTest - If `true` then the return value will be 0 or 1 instead of the number of contacts
  * @return {number}
+ * @memberof Narrowphase
+ * @instance
  */
 Narrowphase.prototype[Shape.CONVEX | Shape.CAPSULE] =
 Narrowphase.prototype[Shape.BOX | Shape.CAPSULE] =
@@ -471,8 +497,13 @@ Narrowphase.prototype.convexCapsule = function(
  * @param  {Capsule}    capsuleShape
  * @param  {Array}      capsulePosition
  * @param  {Number}     capsuleAngle
+ * @param {boolean}     justTest - If `true` then the return value will be 0 or 1 instead of the number of contacts
  * @return {number}
  * @todo Implement me!
+ * @memberof Narrowphase
+ * @instance
+ * @private
+ * @deprecated
  */
 Narrowphase.prototype[Shape.LINE | Shape.CAPSULE] =
 Narrowphase.prototype.lineCapsule = function(
@@ -507,6 +538,10 @@ var capsuleCapsule_tempRect1 = new Box({ width: 1, height: 1 });
  * @param  {Capsule}    sj
  * @param  {Array}      xj
  * @param  {Number}     aj
+ * @param  {Boolean}     justTest - If `true` then the return value will be 0 or 1 instead of the number of contacts
+ * @returns {number} number of contacts
+ * @memberof Narrowphase
+ * @instance
  */
 Narrowphase.prototype[Shape.CAPSULE] =
 Narrowphase.prototype.capsuleCapsule = function(bi,si,xi,ai, bj,sj,xj,aj, justTest){
@@ -609,8 +644,13 @@ Narrowphase.prototype.capsuleCapsule = function(bi,si,xi,ai, bj,sj,xj,aj, justTe
  * @param  {Line}       shapeB
  * @param  {Array}      positionB
  * @param  {Number}     angleB
+ * @param  {Boolean}     justTest - If `true` then the return value will be 0 or 1 instead of the number of contacts
  * @return {number}
  * @todo Implement me!
+ * @memberof Narrowphase
+ * @instance
+ * @private
+ * @deprecated
  */
 Narrowphase.prototype[Shape.LINE] =
 Narrowphase.prototype.lineLine = function(
@@ -631,14 +671,17 @@ Narrowphase.prototype.lineLine = function(
 /**
  * Plane/line Narrowphase
  * @method planeLine
- * @param  {Body}   planeBody
- * @param  {Plane}  planeShape
- * @param  {Array}  planeOffset
- * @param  {Number} planeAngle
- * @param  {Body}   lineBody
- * @param  {Line}   lineShape
- * @param  {Array}  lineOffset
- * @param  {Number} lineAngle
+ * @param  {Body}     planeBody
+ * @param  {Plane}    planeShape
+ * @param  {Array}    planeOffset
+ * @param  {Number}   planeAngle
+ * @param  {Body}     lineBody
+ * @param  {Line}     lineShape
+ * @param  {Array}    lineOffset
+ * @param  {Number}   lineAngle
+ * @param  {Boolean}  justTest - If `true` then the return value will be 0 or 1 instead of the number of contacts
+ * @memberof Narrowphase
+ * @instance
  */
 Narrowphase.prototype[Shape.PLANE | Shape.LINE] =
 Narrowphase.prototype.planeLine = function(planeBody, planeShape, planeOffset, planeAngle,
@@ -732,6 +775,12 @@ Narrowphase.prototype.planeLine = function(planeBody, planeShape, planeOffset, p
     return numContacts;
 };
 
+/*
+ * @member particleCapsule
+ * @memberof Narrowphase
+ * @instance
+ * @param  {Boolean}  justTest - If `true` then the return value will be 0 or 1 instead of the number of contacts
+ */
 Narrowphase.prototype[Shape.PARTICLE | Shape.CAPSULE] =
 Narrowphase.prototype.particleCapsule = function(
     particleBody,
@@ -762,6 +811,8 @@ Narrowphase.prototype.particleCapsule = function(
  * @param {Number} lineRadius Radius to add to the line. Can be used to test Capsules.
  * @param {Number} circleRadius If set, this value overrides the circle shape radius.
  * @return {number}
+ * @memberof Narrowphase
+ * @instance
  */
 Narrowphase.prototype[Shape.CIRCLE | Shape.LINE] =
 Narrowphase.prototype.circleLine = function(
@@ -928,6 +979,8 @@ Narrowphase.prototype.circleLine = function(
  * @param  {Line}   sj
  * @param  {Array}  xj
  * @param  {Number} aj
+ * @memberof Narrowphase
+ * @instance
  */
 Narrowphase.prototype[Shape.CIRCLE | Shape.CAPSULE] =
 Narrowphase.prototype.circleCapsule = function(bi,si,xi,ai, bj,sj,xj,aj, justTest){
@@ -949,6 +1002,8 @@ Narrowphase.prototype.circleCapsule = function(bi,si,xi,ai, bj,sj,xj,aj, justTes
  * @param  {Number} circleRadius
  * @return {number}
  * @todo Should probably do a separating axis test like https://github.com/erincatto/Box2D/blob/master/Box2D/Box2D/Collision/b2CollideCircle.cpp#L62
+ * @memberof Narrowphase
+ * @instance
  */
 Narrowphase.prototype[Shape.CIRCLE | Shape.CONVEX] =
 Narrowphase.prototype[Shape.CIRCLE | Shape.BOX] =
@@ -1213,6 +1268,8 @@ function pointInConvexLocal(localPoint,convexShape){
  * @return {number}
  * @todo use pointInConvex and code more similar to circleConvex
  * @todo don't transform each vertex, but transform the particle position to convex-local instead
+ * @memberof Narrowphase
+ * @instance
  */
 Narrowphase.prototype[Shape.PARTICLE | Shape.CONVEX] =
 Narrowphase.prototype[Shape.PARTICLE | Shape.BOX] =
@@ -1332,6 +1389,8 @@ Narrowphase.prototype.particleConvex = function(
  * @param {Number} [radiusA] Optional radius to use for shapeA
  * @param {Number} [radiusB] Optional radius to use for shapeB
  * @return {number}
+ * @memberof Narrowphase
+ * @instance
  */
 Narrowphase.prototype[Shape.CIRCLE] =
 Narrowphase.prototype.circleCircle = function(
@@ -1403,6 +1462,8 @@ function addSub(out, a, b, c){
  * @param {Boolean} justTest
  * @return {number}
  * @todo only use the deepest contact point + the contact point furthest away from it
+ * @memberof Narrowphase
+ * @instance
  */
 Narrowphase.prototype[Shape.PLANE | Shape.CONVEX] =
 Narrowphase.prototype[Shape.PLANE | Shape.BOX] =
@@ -1498,6 +1559,8 @@ Narrowphase.prototype.planeConvex = function(
  * @param  {Number}     planeAngle
  * @param {Boolean}     justTest
  * @return {number}
+ * @memberof Narrowphase
+ * @instance
  */
 Narrowphase.prototype[Shape.PARTICLE | Shape.PLANE] =
 Narrowphase.prototype.particlePlane = function(
@@ -1562,6 +1625,8 @@ Narrowphase.prototype.particlePlane = function(
  * @param  {Number} particleAngle
  * @param  {Boolean} justTest
  * @return {number}
+ * @memberof Narrowphase
+ * @instance
  */
 Narrowphase.prototype[Shape.CIRCLE | Shape.PARTICLE] =
 Narrowphase.prototype.circleParticle = function(
@@ -1627,6 +1692,8 @@ var planeCapsule_tmpCircle = new Circle({ radius: 1 }),
  * @param  {Number} capsuleAngle
  * @param {Boolean} justTest
  * @return {number}
+ * @memberof Narrowphase
+ * @instance
  */
 Narrowphase.prototype[Shape.PLANE | Shape.CAPSULE] =
 Narrowphase.prototype.planeCapsule = function(
@@ -1695,6 +1762,8 @@ Narrowphase.prototype.planeCapsule = function(
  * @param  {Number}  planeAngle
  * @param  {Boolean} justTest
  * @return {number}
+ * @memberof Narrowphase
+ * @instance
  */
 Narrowphase.prototype[Shape.CIRCLE | Shape.PLANE] =
 Narrowphase.prototype.circlePlane = function(
@@ -1889,6 +1958,8 @@ var maxManifoldPoints = 2;
  * @param  {Number} aj
  * @param  {Boolean} justTest
  * @return {number}
+ * @memberof Narrowphase
+ * @instance
  */
 Narrowphase.prototype[Shape.CONVEX] =
 Narrowphase.prototype[Shape.CONVEX | Shape.BOX] =
@@ -2109,6 +2180,8 @@ var circleHeightfield_candidate = createVec2(),
  * @param  {Heightfield}    sj
  * @param  {Array}          xj
  * @param  {Number}         aj
+ * @memberof Narrowphase
+ * @instance
  */
 Narrowphase.prototype[Shape.CIRCLE | Shape.HEIGHTFIELD] =
 Narrowphase.prototype.circleHeightfield = function( circleBody,circleShape,circlePos,circleAngle,
@@ -2288,6 +2361,8 @@ var convexHeightfield_v0 = createVec2(),
  * @param  {Heightfield}    sj
  * @param  {Array}          xj
  * @param  {Number}         aj
+ * @memberof Narrowphase
+ * @instance
  */
 Narrowphase.prototype[Shape.BOX | Shape.HEIGHTFIELD] =
 Narrowphase.prototype[Shape.CONVEX | Shape.HEIGHTFIELD] =

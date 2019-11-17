@@ -1213,6 +1213,6921 @@
     
 
     
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="bodiesOverlap"><span class="type-signature"></span>bodiesOverlap<span class="signature">(bodyA, bodyB, checkCollisionMasks<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>bodyA</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>bodyB</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>checkCollisionMasks</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="collision_Narrowphase.js.html">collision/Narrowphase.js</a>, <a href="collision_Narrowphase.js.html#line127">line 127</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="capsuleCapsule"><span class="type-signature"></span>capsuleCapsule<span class="signature">(bi, si, xi, ai, bj, sj, xj, aj, justTest)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Capsule/capsule narrowphase
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>bi</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>si</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Capsule.html">Capsule</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>xi</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ai</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>bj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Capsule.html">Capsule</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>xj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>aj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>justTest</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If `true` then the return value will be 0 or 1 instead of the number of contacts</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="collision_Narrowphase.js.html">collision/Narrowphase.js</a>, <a href="collision_Narrowphase.js.html#line530">line 530</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    number of contacts
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="circleCapsule"><span class="type-signature"></span>circleCapsule<span class="signature">(bi, si, xi, ai, bj, sj, xj, aj)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Circle/capsule Narrowphase
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>bi</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>si</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Circle.html">Circle</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>xi</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ai</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>bj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Line.html">Line</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>xj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>aj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="collision_Narrowphase.js.html">collision/Narrowphase.js</a>, <a href="collision_Narrowphase.js.html#line971">line 971</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="circleCircle"><span class="type-signature"></span>circleCircle<span class="signature">(bodyA, shapeA, offsetA, angleA, bodyB, shapeB, offsetB, angleB, justTest, radiusA<span class="signature-attributes">opt</span>, radiusB<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Circle/circle Narrowphase
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>bodyA</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>shapeA</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Circle.html">Circle</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>offsetA</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>angleA</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>bodyB</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>shapeB</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Circle.html">Circle</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>offsetB</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>angleB</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>justTest</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>radiusA</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Optional radius to use for shapeA</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>radiusB</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Optional radius to use for shapeB</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="collision_Narrowphase.js.html">collision/Narrowphase.js</a>, <a href="collision_Narrowphase.js.html#line1377">line 1377</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="circleConvex"><span class="type-signature"></span>circleConvex<span class="signature">(circleBody, circleShape, circleOffset, circleAngle, convexBody, convexShape, convexOffset, convexAngle, justTest, circleRadius)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Circle/convex Narrowphase.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>circleBody</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>circleShape</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Circle.html">Circle</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>circleOffset</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>circleAngle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>convexBody</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>convexShape</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Convex.html">Convex</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>convexOffset</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>convexAngle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>justTest</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>circleRadius</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="collision_Narrowphase.js.html">collision/Narrowphase.js</a>, <a href="collision_Narrowphase.js.html#line990">line 990</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+    <dt class="tag-todo">To Do:</dt>
+    <dd class="tag-todo">
+        <ul>
+            <li>Should probably do a separating axis test like https://github.com/erincatto/Box2D/blob/master/Box2D/Box2D/Collision/b2CollideCircle.cpp#L62</li>
+        </ul>
+    </dd>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="circleHeightfield"><span class="type-signature"></span>circleHeightfield<span class="signature">(bi, si, xi, bj, sj, xj, aj)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>bi</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>si</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Circle.html">Circle</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>xi</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>bj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Heightfield.html">Heightfield</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>xj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>aj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="collision_Narrowphase.js.html">collision/Narrowphase.js</a>, <a href="collision_Narrowphase.js.html#line2174">line 2174</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="circleHeightfield"><span class="type-signature"></span>circleHeightfield<span class="signature">(bi, si, xi, bj, sj, xj, aj)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>bi</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>si</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Circle.html">Circle</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>xi</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>bj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Heightfield.html">Heightfield</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>xj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>aj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="collision_Narrowphase.js.html">collision/Narrowphase.js</a>, <a href="collision_Narrowphase.js.html#line2355">line 2355</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="circleLine"><span class="type-signature"></span>circleLine<span class="signature">(circleBody, circleShape, circleOffset, circleAngle, lineBody, lineShape, lineOffset, lineAngle, justTest, lineRadius, circleRadius)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Circle/line Narrowphase
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>circleBody</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>circleShape</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Circle.html">Circle</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>circleOffset</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>circleAngle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lineBody</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lineShape</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Line.html">Line</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lineOffset</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lineAngle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>justTest</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If set to true, this function will return the result (intersection or not) without adding equations.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lineRadius</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Radius to add to the line. Can be used to test Capsules.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>circleRadius</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If set, this value overrides the circle shape radius.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="collision_Narrowphase.js.html">collision/Narrowphase.js</a>, <a href="collision_Narrowphase.js.html#line799">line 799</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="circleParticle"><span class="type-signature"></span>circleParticle<span class="signature">(circleBody, circleShape, circleOffset, circleAngle, particleBody, particleShape, particleOffset, particleAngle, justTest)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Circle/Particle Narrowphase
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>circleBody</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>circleShape</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Circle.html">Circle</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>circleOffset</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>circleAngle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>particleBody</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>particleShape</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Particle.html">Particle</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>particleOffset</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>particleAngle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>justTest</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="collision_Narrowphase.js.html">collision/Narrowphase.js</a>, <a href="collision_Narrowphase.js.html#line1615">line 1615</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="circlePlane"><span class="type-signature"></span>circlePlane<span class="signature">(circleBody, circleShape, circleOffset, circleAngle, planeBody, planeShape, planeOffset, planeAngle, justTest)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>circleBody</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>circleShape</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Circle.html">Circle</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>circleOffset</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>circleAngle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>planeBody</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>planeShape</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Plane.html">Plane</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>planeOffset</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>planeAngle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>justTest</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="collision_Narrowphase.js.html">collision/Narrowphase.js</a>, <a href="collision_Narrowphase.js.html#line1753">line 1753</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="collidedLastStep"><span class="type-signature"></span>collidedLastStep<span class="signature">(bodyA, bodyB)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Check if the bodies were in contact since the last reset().
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>bodyA</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>bodyB</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="collision_Narrowphase.js.html">collision/Narrowphase.js</a>, <a href="collision_Narrowphase.js.html#line194">line 194</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="convexCapsule"><span class="type-signature"></span>convexCapsule<span class="signature">(convexBody, convexShape, convexPosition, convexAngle, capsuleBody, capsuleShape, capsulePosition, capsuleAngle, justTest)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Convex/capsule narrowphase
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>convexBody</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>convexShape</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Convex.html">Convex</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>convexPosition</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>convexAngle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>capsuleBody</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>capsuleShape</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Capsule.html">Capsule</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>capsulePosition</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>capsuleAngle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>justTest</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If `true` then the return value will be 0 or 1 instead of the number of contacts</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="collision_Narrowphase.js.html">collision/Narrowphase.js</a>, <a href="collision_Narrowphase.js.html#line435">line 435</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="convexConvex"><span class="type-signature"></span>convexConvex<span class="signature">(bi, si, xi, ai, bj, sj, xj, aj, justTest)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Convex/convex Narrowphase.See <a href="http://www.altdevblogaday.com/2011/05/13/contact-generation-between-3d-convex-meshes/">this article</a> for more info.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>bi</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>si</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Convex.html">Convex</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>xi</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ai</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>bj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Convex.html">Convex</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>xj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>aj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>justTest</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="collision_Narrowphase.js.html">collision/Narrowphase.js</a>, <a href="collision_Narrowphase.js.html#line1948">line 1948</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="createContactEquation"><span class="type-signature"></span>createContactEquation<span class="signature">(bodyA, bodyB)</span><span class="type-signature"> &rarr; {<a href="ContactEquation.html">ContactEquation</a>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Creates a ContactEquation, either by reusing an existing object or creating a new one.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>bodyA</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>bodyB</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="collision_Narrowphase.js.html">collision/Narrowphase.js</a>, <a href="collision_Narrowphase.js.html#line240">line 240</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="ContactEquation.html">ContactEquation</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="createFrictionEquation"><span class="type-signature"></span>createFrictionEquation<span class="signature">(bodyA, bodyB)</span><span class="type-signature"> &rarr; {<a href="FrictionEquation.html">FrictionEquation</a>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Creates a FrictionEquation, either by reusing an existing object or creating a new one.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>bodyA</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>bodyB</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="collision_Narrowphase.js.html">collision/Narrowphase.js</a>, <a href="collision_Narrowphase.js.html#line269">line 269</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="FrictionEquation.html">FrictionEquation</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="createFrictionFromAverage"><span class="type-signature"></span>createFrictionFromAverage<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Take the average N latest contact point on the plane.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="collision_Narrowphase.js.html">collision/Narrowphase.js</a>, <a href="collision_Narrowphase.js.html#line320">line 320</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="createFrictionFromContact"><span class="type-signature"></span>createFrictionFromContact<span class="signature">(contactEquation)</span><span class="type-signature"> &rarr; {<a href="FrictionEquation.html">FrictionEquation</a>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Creates a FrictionEquation given the data in the ContactEquation. Uses same offset vectors ri and rj, but the tangent vector will be constructed from the collision normal.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>contactEquation</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="ContactEquation.html">ContactEquation</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="collision_Narrowphase.js.html">collision/Narrowphase.js</a>, <a href="collision_Narrowphase.js.html#line298">line 298</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="FrictionEquation.html">FrictionEquation</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="lineBox"><span class="type-signature"></span>lineBox<span class="signature">(lineBody, lineShape, lineOffset, lineAngle, boxBody, boxShape, boxOffset, boxAngle, justTest)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Line/box narrowphase
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>lineBody</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lineShape</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Line.html">Line</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lineOffset</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lineAngle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>boxBody</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>boxShape</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Box.html">Box</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>boxOffset</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>boxAngle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>justTest</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If `true` then the return value will be 0 or 1 instead of the number of contacts</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <dt class="important tag-deprecated">Deprecated:</dt><dd class="yes-def tag-deprecated"><ul class="dummy"><li>Yes</li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="collision_Narrowphase.js.html">collision/Narrowphase.js</a>, <a href="collision_Narrowphase.js.html#line386">line 386</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+    <dt class="tag-todo">To Do:</dt>
+    <dd class="tag-todo">
+        <ul>
+            <li>Try to remove this</li>
+        </ul>
+    </dd>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="particleConvex"><span class="type-signature"></span>particleConvex<span class="signature">(particleBody, particleShape, particleOffset, particleAngle, convexBody, convexShape, convexOffset, convexAngle, justTest)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Particle/convex Narrowphase
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>particleBody</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>particleShape</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Particle.html">Particle</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>particleOffset</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>particleAngle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>convexBody</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>convexShape</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Convex.html">Convex</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>convexOffset</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>convexAngle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>justTest</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="collision_Narrowphase.js.html">collision/Narrowphase.js</a>, <a href="collision_Narrowphase.js.html#line1256">line 1256</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+    <dt class="tag-todo">To Do:</dt>
+    <dd class="tag-todo">
+        <ul>
+            <li>use pointInConvex and code more similar to circleConvex</li>
+        
+            <li>don't transform each vertex, but transform the particle position to convex-local instead</li>
+        </ul>
+    </dd>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="particlePlane"><span class="type-signature"></span>particlePlane<span class="signature">(particleBody, particleShape, particleOffset, particleAngle, planeBody, planeShape, planeOffset, planeAngle, justTest)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Narrowphase for particle vs plane
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>particleBody</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>particleShape</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Particle.html">Particle</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>particleOffset</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>particleAngle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>planeBody</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>planeShape</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Plane.html">Plane</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>planeOffset</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>planeAngle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>justTest</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="collision_Narrowphase.js.html">collision/Narrowphase.js</a>, <a href="collision_Narrowphase.js.html#line1549">line 1549</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="planeCapsule"><span class="type-signature"></span>planeCapsule<span class="signature">(planeBody, planeShape, planeOffset, planeAngle, capsuleBody, capsuleShape, capsuleOffset, capsuleAngle, justTest)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>planeBody</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>planeShape</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Circle.html">Circle</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>planeOffset</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>planeAngle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>capsuleBody</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>capsuleShape</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Particle.html">Particle</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>capsuleOffset</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>capsuleAngle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>justTest</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="collision_Narrowphase.js.html">collision/Narrowphase.js</a>, <a href="collision_Narrowphase.js.html#line1683">line 1683</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="planeConvex"><span class="type-signature"></span>planeConvex<span class="signature">(planeBody, planeShape, planeOffset, planeAngle, convexBody, convexShape, convexOffset, convexAngle, justTest)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Plane/Convex Narrowphase
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>planeBody</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>planeShape</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Plane.html">Plane</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>planeOffset</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>planeAngle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>convexBody</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>convexShape</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Convex.html">Convex</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>convexOffset</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>convexAngle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>justTest</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="collision_Narrowphase.js.html">collision/Narrowphase.js</a>, <a href="collision_Narrowphase.js.html#line1451">line 1451</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+    <dt class="tag-todo">To Do:</dt>
+    <dd class="tag-todo">
+        <ul>
+            <li>only use the deepest contact point + the contact point furthest away from it</li>
+        </ul>
+    </dd>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="planeLine"><span class="type-signature"></span>planeLine<span class="signature">(planeBody, planeShape, planeOffset, planeAngle, lineBody, lineShape, lineOffset, lineAngle, justTest)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Plane/line Narrowphase
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>planeBody</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>planeShape</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Plane.html">Plane</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>planeOffset</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>planeAngle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lineBody</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Body.html">Body</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lineShape</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Line.html">Line</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lineOffset</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lineAngle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>justTest</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If `true` then the return value will be 0 or 1 instead of the number of contacts</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="collision_Narrowphase.js.html">collision/Narrowphase.js</a>, <a href="collision_Narrowphase.js.html#line671">line 671</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="reset"><span class="type-signature"></span>reset<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Throws away the old equations and gets ready to create new
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="collision_Narrowphase.js.html">collision/Narrowphase.js</a>, <a href="collision_Narrowphase.js.html#line209">line 209</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
 
     
 
@@ -1227,13 +8142,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="AABB.html">AABB</a></li><li><a href="AngleLockEquation.html">AngleLockEquation</a></li><li><a href="Body.html">Body</a></li><li><a href="Box.html">Box</a></li><li><a href="Broadphase.html">Broadphase</a></li><li><a href="Capsule.html">Capsule</a></li><li><a href="Circle.html">Circle</a></li><li><a href="Constraint.html">Constraint</a></li><li><a href="ContactEquation.html">ContactEquation</a></li><li><a href="ContactEquationPool.html">ContactEquationPool</a></li><li><a href="ContactMaterial.html">ContactMaterial</a></li><li><a href="Convex.html">Convex</a></li><li><a href="DistanceConstraint.html">DistanceConstraint</a></li><li><a href="Equation.html">Equation</a></li><li><a href="EventEmitter.html">EventEmitter</a></li><li><a href="FrictionEquation.html">FrictionEquation</a></li><li><a href="FrictionEquationPool.html">FrictionEquationPool</a></li><li><a href="GearConstraint.html">GearConstraint</a></li><li><a href="GSSolver.html">GSSolver</a></li><li><a href="Heightfield.html">Heightfield</a></li><li><a href="Line.html">Line</a></li><li><a href="LinearSpring.html">LinearSpring</a></li><li><a href="LockConstraint.html">LockConstraint</a></li><li><a href="Material.html">Material</a></li><li><a href="NaiveBroadphase.html">NaiveBroadphase</a></li><li><a href="Narrowphase.html">Narrowphase</a></li><li><a href="OverlapKeeper.html">OverlapKeeper</a></li><li><a href="OverlapKeeperRecord.html">OverlapKeeperRecord</a></li><li><a href="OverlapKeeperRecordPool.html">OverlapKeeperRecordPool</a></li><li><a href="Particle.html">Particle</a></li><li><a href="Plane.html">Plane</a></li><li><a href="Pool.html">Pool</a></li><li><a href="PrismaticConstraint.html">PrismaticConstraint</a></li><li><a href="Ray.html">Ray</a></li><li><a href="RaycastResult.html">RaycastResult</a></li><li><a href="RevoluteConstraint.html">RevoluteConstraint</a></li><li><a href="RotationalLockEquation.html">RotationalLockEquation</a></li><li><a href="RotationalSpring.html">RotationalSpring</a></li><li><a href="RotationalVelocityEquation.html">RotationalVelocityEquation</a></li><li><a href="SAPBroadphase.html">SAPBroadphase</a></li><li><a href="Shape.html">Shape</a></li><li><a href="Solver.html">Solver</a></li><li><a href="Spring.html">Spring</a></li><li><a href="TopDownVehicle.html">TopDownVehicle</a></li><li><a href="TupleDictionary.html">TupleDictionary</a></li><li><a href="UnionFind.html">UnionFind</a></li><li><a href="Utils.html">Utils</a></li><li><a href="vec2.html">vec2</a></li><li><a href="WheelConstraint.html">WheelConstraint</a></li><li><a href="World.html">World</a></li></ul><h3>Events</h3><ul><li><a href="global.html#event:addBody">addBody</a></li><li><a href="global.html#event:addSpring">addSpring</a></li><li><a href="global.html#event:beginContact">beginContact</a></li><li><a href="global.html#event:endContact">endContact</a></li><li><a href="global.html#event:impact">impact</a></li><li><a href="global.html#event:postBroadphase">postBroadphase</a></li><li><a href="global.html#event:postStep">postStep</a></li><li><a href="global.html#event:preSolve">preSolve</a></li><li><a href="global.html#event:removeBody">removeBody</a></li><li><a href="global.html#event:sleep">sleep</a></li><li><a href="global.html#event:sleepy">sleepy</a></li><li><a href="global.html#event:wakeup">wakeup</a></li></ul><h3>Global</h3><ul><li><a href="global.html#aabbQuery">aabbQuery</a></li><li><a href="global.html">add</a></li><li><a href="global.html#addBody">addBody</a></li><li><a href="global.html#addConstraint">addConstraint</a></li><li><a href="global.html#addContactMaterial">addContactMaterial</a></li><li><a href="global.html#addEquation">addEquation</a></li><li><a href="global.html#addEquations">addEquations</a></li><li><a href="global.html#addShape">addShape</a></li><li><a href="global.html#addSpring">addSpring</a></li><li><a href="global.html#addToWlambda">addToWlambda</a></li><li><a href="global.html#addToWorld">addToWorld</a></li><li><a href="global.html#addWheel">addWheel</a></li><li><a href="global.html#adjustCenterOfMass">adjustCenterOfMass</a></li><li><a href="global.html">appendArray</a></li><li><a href="global.html#applyDamping">applyDamping</a></li><li><a href="global.html#applyForce">applyForce</a></li><li><a href="global.html#applyForceLocal">applyForceLocal</a></li><li><a href="global.html#applyImpulse">applyImpulse</a></li><li><a href="global.html#applyImpulseLocal">applyImpulseLocal</a></li><li><a href="global.html">arrayRemove</a></li><li><a href="global.html#bodiesAreOverlapping">bodiesAreOverlapping</a></li><li><a href="global.html#bodiesOverlap">bodiesOverlap</a></li><li><a href="global.html#capsuleCapsule">capsuleCapsule</a></li><li><a href="global.html">centroid</a></li><li><a href="global.html#circleCapsule">circleCapsule</a></li><li><a href="global.html#circleCircle">circleCircle</a></li><li><a href="global.html#circleConvex">circleConvex</a></li><li><a href="global.html#circleHeightfield">circleHeightfield</a></li><li><a href="global.html#circleLine">circleLine</a></li><li><a href="global.html#circleParticle">circleParticle</a></li><li><a href="global.html#circlePlane">circlePlane</a></li><li><a href="global.html#clear">clear</a></li><li><a href="global.html">clone</a></li><li><a href="global.html#collidedLastStep">collidedLastStep</a></li><li><a href="global.html#computeAABB">computeAABB</a></li><li><a href="global.html#computeB">computeB</a></li><li><a href="global.html#computeGiMf">computeGiMf</a></li><li><a href="global.html#computeGiMGt">computeGiMGt</a></li><li><a href="global.html#computeGq">computeGq</a></li><li><a href="global.html#computeGW">computeGW</a></li><li><a href="global.html#computeGWlambda">computeGWlambda</a></li><li><a href="global.html#computeInvC">computeInvC</a></li><li><a href="global.html#computeMomentOfInertia">computeMomentOfInertia</a></li><li><a href="global.html#conputeMomentOfInertia">conputeMomentOfInertia</a></li><li><a href="global.html#convexCapsule">convexCapsule</a></li><li><a href="global.html#convexConvex">convexConvex</a></li><li><a href="global.html#convexLine">convexLine</a></li><li><a href="global.html#copy">copy</a></li><li><a href="global.html#create">create</a></li><li><a href="global.html#createContactEquation">createContactEquation</a></li><li><a href="global.html#createFrictionEquation">createFrictionEquation</a></li><li><a href="global.html#createFrictionFromContact">createFrictionFromContact</a></li><li><a href="global.html">crossLength</a></li><li><a href="global.html">crossVZ</a></li><li><a href="global.html">crossZV</a></li><li><a href="global.html">defaults</a></li><li><a href="global.html#destroy">destroy</a></li><li><a href="global.html#disableBodyCollision">disableBodyCollision</a></li><li><a href="global.html#disableMotor">disableMotor</a></li><li><a href="global.html">distance</a></li><li><a href="global.html">divide</a></li><li><a href="global.html">dot</a></li><li><a href="global.html#emit">emit</a></li><li><a href="global.html#enableBodyCollision">enableBodyCollision</a></li><li><a href="global.html#enableMotor">enableMotor</a></li><li><a href="global.html">extend</a></li><li><a href="global.html#find">find</a></li><li><a href="global.html#fromPolygon">fromPolygon</a></li><li><a href="global.html">fromValues</a></li><li><a href="global.html#get">get</a></li><li><a href="global.html#getAABB">getAABB</a></li><li><a href="global.html#getArea">getArea</a></li><li><a href="global.html#getBodyById">getBodyById</a></li><li><a href="global.html#getByKey">getByKey</a></li><li><a href="global.html#getCollisionPairs">getCollisionPairs</a></li><li><a href="global.html#getContactMaterial">getContactMaterial</a></li><li><a href="global.html#getHitDistance">getHitDistance</a></li><li><a href="global.html#getHitPoint">getHitPoint</a></li><li><a href="global.html#getKey">getKey</a></li><li><a href="global.html#getLineSegment">getLineSegment</a></li><li><a href="global.html">getLineSegmentsIntersection</a></li><li><a href="global.html">getLineSegmentsIntersectionFraction</a></li><li><a href="global.html#getMaxForce">getMaxForce</a></li><li><a href="global.html#getMaxTorque">getMaxTorque</a></li><li><a href="global.html#getMotorSpeed">getMotorSpeed</a></li><li><a href="global.html#getSlipForce">getSlipForce</a></li><li><a href="global.html#getSpeed">getSpeed</a></li><li><a href="global.html#getVelocityAlongNormal">getVelocityAlongNormal</a></li><li><a href="global.html#getVelocityAtPoint">getVelocityAtPoint</a></li><li><a href="global.html#getWorldAnchorA">getWorldAnchorA</a></li><li><a href="global.html#getWorldAnchorB">getWorldAnchorB</a></li><li><a href="global.html#gmult">gmult</a></li><li><a href="global.html#has">has</a></li><li><a href="global.html#hasHit">hasHit</a></li><li><a href="global.html#hitTest">hitTest</a></li><li><a href="global.html#integrate">integrate</a></li><li><a href="global.html#intersectBodies">intersectBodies</a></li><li><a href="global.html">length</a></li><li><a href="global.html">lerp</a></li><li><a href="global.html#lineBox">lineBox</a></li><li><a href="global.html#lineCapsule">lineCapsule</a></li><li><a href="global.html#lineLine">lineLine</a></li><li><a href="global.html#motorEnabled">motorEnabled</a></li><li><a href="global.html#motorIsEnabled">motorIsEnabled</a></li><li><a href="global.html#motorMaxForce">motorMaxForce</a></li><li><a href="global.html#motorSpeed">motorSpeed</a></li><li><a href="global.html">multiply</a></li><li><a href="global.html">negate</a></li><li><a href="global.html">normalize</a></li><li><a href="global.html#off">off</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#overlaps">overlaps</a></li><li><a href="global.html#particleConvex">particleConvex</a></li><li><a href="global.html#particlePlane">particlePlane</a></li><li><a href="global.html#planeCapsule">planeCapsule</a></li><li><a href="global.html#planeConvex">planeConvex</a></li><li><a href="global.html#planeLine">planeLine</a></li><li><a href="global.html#pointTest">pointTest</a></li><li><a href="global.html">projectOntoAxis</a></li><li><a href="global.html#raycast">raycast</a></li><li><a href="global.html">reflect</a></li><li><a href="global.html#release">release</a></li><li><a href="global.html#removeAllEquations">removeAllEquations</a></li><li><a href="global.html#removeBody">removeBody</a></li><li><a href="global.html#removeConstraint">removeConstraint</a></li><li><a href="global.html#removeContactMaterial">removeContactMaterial</a></li><li><a href="global.html#removeEquation">removeEquation</a></li><li><a href="global.html#removeFromWorld">removeFromWorld</a></li><li><a href="global.html#removeShape">removeShape</a></li><li><a href="global.html#removeSpring">removeSpring</a></li><li><a href="global.html#reset">reset</a></li><li><a href="global.html#resize">resize</a></li><li><a href="global.html">rotate</a></li><li><a href="global.html">rotate90cw</a></li><li><a href="global.html">scale</a></li><li><a href="global.html#set">set</a></li><li><a href="global.html#setBrakeForce">setBrakeForce</a></li><li><a href="global.html#setDensity">setDensity</a></li><li><a href="global.html#setGlobalRelaxation">setGlobalRelaxation</a></li><li><a href="global.html#setGlobalStiffness">setGlobalStiffness</a></li><li><a href="global.html#setLimits">setLimits</a></li><li><a href="global.html#setMaxBias">setMaxBias</a></li><li><a href="global.html#setMaxForce">setMaxForce</a></li><li><a href="global.html#setMaxTorque">setMaxTorque</a></li><li><a href="global.html#setMotorSpeed">setMotorSpeed</a></li><li><a href="global.html#setOverlapping">setOverlapping</a></li><li><a href="global.html#setRatio">setRatio</a></li><li><a href="global.html#setRelaxation">setRelaxation</a></li><li><a href="global.html#setSideFriction">setSideFriction</a></li><li><a href="global.html#setSlipForce">setSlipForce</a></li><li><a href="global.html#setStiffness">setStiffness</a></li><li><a href="global.html#setWorld">setWorld</a></li><li><a href="global.html#setWorldAnchorA">setWorldAnchorA</a></li><li><a href="global.html#setWorldAnchorB">setWorldAnchorB</a></li><li><a href="global.html#setZeroForce">setZeroForce</a></li><li><a href="global.html">shallowClone</a></li><li><a href="global.html#sleep">sleep</a></li><li><a href="global.html#sleepTick">sleepTick</a></li><li><a href="global.html#solve">solve</a></li><li><a href="global.html#sortEquations">sortEquations</a></li><li><a href="global.html">splice</a></li><li><a href="global.html">squaredDistance</a></li><li><a href="global.html">squaredLength</a></li><li><a href="global.html#step">step</a></li><li><a href="global.html#stop">stop</a></li><li><a href="global.html">str</a></li><li><a href="global.html">subtract</a></li><li><a href="global.html#tick">tick</a></li><li><a href="global.html#toGlobalFrame">toGlobalFrame</a></li><li><a href="global.html#toLocalFrame">toLocalFrame</a></li><li><a href="global.html#toWorldFrame">toWorldFrame</a></li><li><a href="global.html">triangleArea</a></li><li><a href="global.html#union">union</a></li><li><a href="global.html#update">update</a></li><li><a href="global.html#updateAABB">updateAABB</a></li><li><a href="global.html#updateArea">updateArea</a></li><li><a href="global.html#updateBoundingRadius">updateBoundingRadius</a></li><li><a href="global.html#updateCenterOfMass">updateCenterOfMass</a></li><li><a href="global.html#updateMassProperties">updateMassProperties</a></li><li><a href="global.html#updateMaxMinValues">updateMaxMinValues</a></li><li><a href="global.html#updateTriangles">updateTriangles</a></li><li><a href="global.html#vectorToGlobalFrame">vectorToGlobalFrame</a></li><li><a href="global.html#vectorToLocalFrame">vectorToLocalFrame</a></li><li><a href="global.html#vectorToWorldFrame">vectorToWorldFrame</a></li><li><a href="global.html#wakeUp">wakeUp</a></li><li><a href="global.html#worldPointToLocal">worldPointToLocal</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="AABB.html">AABB</a></li><li><a href="AngleLockEquation.html">AngleLockEquation</a></li><li><a href="Body.html">Body</a></li><li><a href="Box.html">Box</a></li><li><a href="Broadphase.html">Broadphase</a></li><li><a href="Capsule.html">Capsule</a></li><li><a href="Circle.html">Circle</a></li><li><a href="Constraint.html">Constraint</a></li><li><a href="ContactEquation.html">ContactEquation</a></li><li><a href="ContactEquationPool.html">ContactEquationPool</a></li><li><a href="ContactMaterial.html">ContactMaterial</a></li><li><a href="Convex.html">Convex</a></li><li><a href="DistanceConstraint.html">DistanceConstraint</a></li><li><a href="Equation.html">Equation</a></li><li><a href="EventEmitter.html">EventEmitter</a></li><li><a href="FrictionEquation.html">FrictionEquation</a></li><li><a href="FrictionEquationPool.html">FrictionEquationPool</a></li><li><a href="GearConstraint.html">GearConstraint</a></li><li><a href="GSSolver.html">GSSolver</a></li><li><a href="Heightfield.html">Heightfield</a></li><li><a href="Line.html">Line</a></li><li><a href="LinearSpring.html">LinearSpring</a></li><li><a href="LockConstraint.html">LockConstraint</a></li><li><a href="Material.html">Material</a></li><li><a href="NaiveBroadphase.html">NaiveBroadphase</a></li><li><a href="Narrowphase.html">Narrowphase</a></li><li><a href="OverlapKeeper.html">OverlapKeeper</a></li><li><a href="OverlapKeeperRecord.html">OverlapKeeperRecord</a></li><li><a href="OverlapKeeperRecordPool.html">OverlapKeeperRecordPool</a></li><li><a href="Particle.html">Particle</a></li><li><a href="Plane.html">Plane</a></li><li><a href="Pool.html">Pool</a></li><li><a href="PrismaticConstraint.html">PrismaticConstraint</a></li><li><a href="Ray.html">Ray</a></li><li><a href="RaycastResult.html">RaycastResult</a></li><li><a href="RevoluteConstraint.html">RevoluteConstraint</a></li><li><a href="RotationalLockEquation.html">RotationalLockEquation</a></li><li><a href="RotationalSpring.html">RotationalSpring</a></li><li><a href="RotationalVelocityEquation.html">RotationalVelocityEquation</a></li><li><a href="SAPBroadphase.html">SAPBroadphase</a></li><li><a href="Shape.html">Shape</a></li><li><a href="Solver.html">Solver</a></li><li><a href="Spring.html">Spring</a></li><li><a href="TopDownVehicle.html">TopDownVehicle</a></li><li><a href="TupleDictionary.html">TupleDictionary</a></li><li><a href="UnionFind.html">UnionFind</a></li><li><a href="Utils.html">Utils</a></li><li><a href="vec2.html">vec2</a></li><li><a href="WheelConstraint.html">WheelConstraint</a></li><li><a href="World.html">World</a></li></ul><h3>Events</h3><ul><li><a href="global.html#event:addBody">addBody</a></li><li><a href="global.html#event:addSpring">addSpring</a></li><li><a href="global.html#event:beginContact">beginContact</a></li><li><a href="global.html#event:endContact">endContact</a></li><li><a href="global.html#event:impact">impact</a></li><li><a href="global.html#event:postBroadphase">postBroadphase</a></li><li><a href="global.html#event:postStep">postStep</a></li><li><a href="global.html#event:preSolve">preSolve</a></li><li><a href="global.html#event:removeBody">removeBody</a></li><li><a href="global.html#event:sleep">sleep</a></li><li><a href="global.html#event:sleepy">sleepy</a></li><li><a href="global.html#event:wakeup">wakeup</a></li></ul><h3>Global</h3><ul><li><a href="global.html#aabbQuery">aabbQuery</a></li><li><a href="global.html">add</a></li><li><a href="global.html#addBody">addBody</a></li><li><a href="global.html#addConstraint">addConstraint</a></li><li><a href="global.html#addContactMaterial">addContactMaterial</a></li><li><a href="global.html#addEquation">addEquation</a></li><li><a href="global.html#addEquations">addEquations</a></li><li><a href="global.html#addShape">addShape</a></li><li><a href="global.html#addSpring">addSpring</a></li><li><a href="global.html#addToWlambda">addToWlambda</a></li><li><a href="global.html#addToWorld">addToWorld</a></li><li><a href="global.html#addWheel">addWheel</a></li><li><a href="global.html#adjustCenterOfMass">adjustCenterOfMass</a></li><li><a href="global.html">appendArray</a></li><li><a href="global.html#applyDamping">applyDamping</a></li><li><a href="global.html#applyForce">applyForce</a></li><li><a href="global.html#applyForceLocal">applyForceLocal</a></li><li><a href="global.html#applyImpulse">applyImpulse</a></li><li><a href="global.html#applyImpulseLocal">applyImpulseLocal</a></li><li><a href="global.html">arrayRemove</a></li><li><a href="global.html#bodiesAreOverlapping">bodiesAreOverlapping</a></li><li><a href="global.html">centroid</a></li><li><a href="global.html#clear">clear</a></li><li><a href="global.html">clone</a></li><li><a href="global.html#computeAABB">computeAABB</a></li><li><a href="global.html#computeB">computeB</a></li><li><a href="global.html#computeGiMf">computeGiMf</a></li><li><a href="global.html#computeGiMGt">computeGiMGt</a></li><li><a href="global.html#computeGq">computeGq</a></li><li><a href="global.html#computeGW">computeGW</a></li><li><a href="global.html#computeGWlambda">computeGWlambda</a></li><li><a href="global.html#computeInvC">computeInvC</a></li><li><a href="global.html#computeMomentOfInertia">computeMomentOfInertia</a></li><li><a href="global.html#conputeMomentOfInertia">conputeMomentOfInertia</a></li><li><a href="global.html#copy">copy</a></li><li><a href="global.html#create">create</a></li><li><a href="global.html">crossLength</a></li><li><a href="global.html">crossVZ</a></li><li><a href="global.html">crossZV</a></li><li><a href="global.html">defaults</a></li><li><a href="global.html#destroy">destroy</a></li><li><a href="global.html#disableBodyCollision">disableBodyCollision</a></li><li><a href="global.html#disableMotor">disableMotor</a></li><li><a href="global.html">distance</a></li><li><a href="global.html">divide</a></li><li><a href="global.html">dot</a></li><li><a href="global.html#emit">emit</a></li><li><a href="global.html#enableBodyCollision">enableBodyCollision</a></li><li><a href="global.html#enableMotor">enableMotor</a></li><li><a href="global.html">extend</a></li><li><a href="global.html#find">find</a></li><li><a href="global.html#fromPolygon">fromPolygon</a></li><li><a href="global.html">fromValues</a></li><li><a href="global.html#get">get</a></li><li><a href="global.html#getAABB">getAABB</a></li><li><a href="global.html#getArea">getArea</a></li><li><a href="global.html#getBodyById">getBodyById</a></li><li><a href="global.html#getByKey">getByKey</a></li><li><a href="global.html#getCollisionPairs">getCollisionPairs</a></li><li><a href="global.html#getContactMaterial">getContactMaterial</a></li><li><a href="global.html#getHitDistance">getHitDistance</a></li><li><a href="global.html#getHitPoint">getHitPoint</a></li><li><a href="global.html#getKey">getKey</a></li><li><a href="global.html#getLineSegment">getLineSegment</a></li><li><a href="global.html">getLineSegmentsIntersection</a></li><li><a href="global.html">getLineSegmentsIntersectionFraction</a></li><li><a href="global.html#getMaxForce">getMaxForce</a></li><li><a href="global.html#getMaxTorque">getMaxTorque</a></li><li><a href="global.html#getMotorSpeed">getMotorSpeed</a></li><li><a href="global.html#getSlipForce">getSlipForce</a></li><li><a href="global.html#getSpeed">getSpeed</a></li><li><a href="global.html#getVelocityAlongNormal">getVelocityAlongNormal</a></li><li><a href="global.html#getVelocityAtPoint">getVelocityAtPoint</a></li><li><a href="global.html#getWorldAnchorA">getWorldAnchorA</a></li><li><a href="global.html#getWorldAnchorB">getWorldAnchorB</a></li><li><a href="global.html#gmult">gmult</a></li><li><a href="global.html#has">has</a></li><li><a href="global.html#hasHit">hasHit</a></li><li><a href="global.html#hitTest">hitTest</a></li><li><a href="global.html#integrate">integrate</a></li><li><a href="global.html#intersectBodies">intersectBodies</a></li><li><a href="global.html">length</a></li><li><a href="global.html">lerp</a></li><li><a href="global.html#motorEnabled">motorEnabled</a></li><li><a href="global.html#motorIsEnabled">motorIsEnabled</a></li><li><a href="global.html#motorMaxForce">motorMaxForce</a></li><li><a href="global.html#motorSpeed">motorSpeed</a></li><li><a href="global.html">multiply</a></li><li><a href="global.html">negate</a></li><li><a href="global.html">normalize</a></li><li><a href="global.html#off">off</a></li><li><a href="global.html#on">on</a></li><li><a href="global.html#overlaps">overlaps</a></li><li><a href="global.html#pointTest">pointTest</a></li><li><a href="global.html">projectOntoAxis</a></li><li><a href="global.html#raycast">raycast</a></li><li><a href="global.html">reflect</a></li><li><a href="global.html#release">release</a></li><li><a href="global.html#removeAllEquations">removeAllEquations</a></li><li><a href="global.html#removeBody">removeBody</a></li><li><a href="global.html#removeConstraint">removeConstraint</a></li><li><a href="global.html#removeContactMaterial">removeContactMaterial</a></li><li><a href="global.html#removeEquation">removeEquation</a></li><li><a href="global.html#removeFromWorld">removeFromWorld</a></li><li><a href="global.html#removeShape">removeShape</a></li><li><a href="global.html#removeSpring">removeSpring</a></li><li><a href="global.html#reset">reset</a></li><li><a href="global.html#resize">resize</a></li><li><a href="global.html">rotate</a></li><li><a href="global.html">rotate90cw</a></li><li><a href="global.html">scale</a></li><li><a href="global.html#set">set</a></li><li><a href="global.html#setBrakeForce">setBrakeForce</a></li><li><a href="global.html#setDensity">setDensity</a></li><li><a href="global.html#setGlobalRelaxation">setGlobalRelaxation</a></li><li><a href="global.html#setGlobalStiffness">setGlobalStiffness</a></li><li><a href="global.html#setLimits">setLimits</a></li><li><a href="global.html#setMaxBias">setMaxBias</a></li><li><a href="global.html#setMaxForce">setMaxForce</a></li><li><a href="global.html#setMaxTorque">setMaxTorque</a></li><li><a href="global.html#setMotorSpeed">setMotorSpeed</a></li><li><a href="global.html#setOverlapping">setOverlapping</a></li><li><a href="global.html#setRatio">setRatio</a></li><li><a href="global.html#setRelaxation">setRelaxation</a></li><li><a href="global.html#setSideFriction">setSideFriction</a></li><li><a href="global.html#setSlipForce">setSlipForce</a></li><li><a href="global.html#setStiffness">setStiffness</a></li><li><a href="global.html#setWorld">setWorld</a></li><li><a href="global.html#setWorldAnchorA">setWorldAnchorA</a></li><li><a href="global.html#setWorldAnchorB">setWorldAnchorB</a></li><li><a href="global.html#setZeroForce">setZeroForce</a></li><li><a href="global.html">shallowClone</a></li><li><a href="global.html#sleep">sleep</a></li><li><a href="global.html#sleepTick">sleepTick</a></li><li><a href="global.html#solve">solve</a></li><li><a href="global.html#sortEquations">sortEquations</a></li><li><a href="global.html">splice</a></li><li><a href="global.html">squaredDistance</a></li><li><a href="global.html">squaredLength</a></li><li><a href="global.html#step">step</a></li><li><a href="global.html#stop">stop</a></li><li><a href="global.html">str</a></li><li><a href="global.html">subtract</a></li><li><a href="global.html#tick">tick</a></li><li><a href="global.html#toGlobalFrame">toGlobalFrame</a></li><li><a href="global.html#toLocalFrame">toLocalFrame</a></li><li><a href="global.html#toWorldFrame">toWorldFrame</a></li><li><a href="global.html">triangleArea</a></li><li><a href="global.html#union">union</a></li><li><a href="global.html#update">update</a></li><li><a href="global.html#updateAABB">updateAABB</a></li><li><a href="global.html#updateArea">updateArea</a></li><li><a href="global.html#updateBoundingRadius">updateBoundingRadius</a></li><li><a href="global.html#updateCenterOfMass">updateCenterOfMass</a></li><li><a href="global.html#updateMassProperties">updateMassProperties</a></li><li><a href="global.html#updateMaxMinValues">updateMaxMinValues</a></li><li><a href="global.html#updateTriangles">updateTriangles</a></li><li><a href="global.html#vectorToGlobalFrame">vectorToGlobalFrame</a></li><li><a href="global.html#vectorToLocalFrame">vectorToLocalFrame</a></li><li><a href="global.html#vectorToWorldFrame">vectorToWorldFrame</a></li><li><a href="global.html#wakeUp">wakeUp</a></li><li><a href="global.html#worldPointToLocal">worldPointToLocal</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Sat Nov 16 2019 18:03:53 GMT-0500 (Eastern Standard Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Sat Nov 16 2019 22:40:41 GMT-0500 (Eastern Standard Time)
 </footer>
 
 <script> prettyPrint(); </script>
