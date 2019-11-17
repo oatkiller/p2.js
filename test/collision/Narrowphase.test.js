@@ -717,41 +717,39 @@ describe("Narrowphase", function() {
     })
   });
 
+  describe('when checking if bodies overlap', function() {
+    it('determines if overlapping bodies overlap', function() {
+      bodyA.addShape(new Circle({ radius: 1 }));
+      bodyB.addShape(new Circle({ radius: 1 }));
+      expect(narrowphase.bodiesOverlap(bodyA, bodyB)).toBe(true);
+    })
+
+    it('determines when bodies don\'t overlap', function() {
+      bodyA.addShape(new Circle({ radius: 1 }));
+      bodyB.addShape(new Circle({ radius: 1 }));
+      bodyB.position[0] = 10;
+      expect(narrowphase.bodiesOverlap(bodyA, bodyB)).toBe(false);
+    })
+
+    it('determines when colliding bodies with collision groups and collision masks collide', function() {
+      bodyA.addShape(new Circle({ radius: 1, collisionGroup: 1, collisionMask: 1 }));
+      bodyB.addShape(new Circle({ radius: 1, collisionGroup: 2, collisionMask: 2 }));
+      bodyB.shapes[0].collisionGroup = bodyB.shapes[0].collisionMask = 1;
+      expect(narrowphase.bodiesOverlap(bodyA, bodyB, true)).toBe(true)
+    })
+
+    it('determines when non-colliding bodies with collision groups and collision masks don\'t collide', function() {
+      bodyA.addShape(new Circle({ radius: 1, collisionGroup: 1, collisionMask: 1 }));
+      bodyB.addShape(new Circle({ radius: 1, collisionGroup: 2, collisionMask: 2 }));
+      expect(narrowphase.bodiesOverlap(bodyA, bodyB, true)).toBe(undefined)
+    })
+
+    it("determines when bodies collide regardless of order", function() {
+      bodyA.addShape(new Box({ width: 1, height: 1 }));
+      bodyB.addShape(new Circle({ radius: 1 }));
+
+      expect(narrowphase.bodiesOverlap(bodyA, bodyB, true)).toBe(true)
+      expect(narrowphase.bodiesOverlap(bodyB, bodyA, true)).toBe(true);
+    })
+  })
 });
-
-/*
-exports.bodiesOverlap = {
-
-    simple: function(test){
-        bodyA.addShape(new Circle({ radius: 1 }));
-        bodyB.addShape(new Circle({ radius: 1 }));
-        test.ok(narrowphase.bodiesOverlap(bodyA, bodyB));
-        bodyB.position[0] = 10;
-        test.ok(!narrowphase.bodiesOverlap(bodyA, bodyB));
-        test.done();
-    },
-
-    withMask: function(test){
-        bodyA.addShape(new Circle({ radius: 1, collisionGroup: 1, collisionMask: 1 }));
-        bodyB.addShape(new Circle({ radius: 1, collisionGroup: 2, collisionMask: 2 }));
-        test.ok(!narrowphase.bodiesOverlap(bodyA, bodyB, true));
-
-        bodyB.shapes[0].collisionGroup = bodyB.shapes[0].collisionMask = 1;
-        test.ok(narrowphase.bodiesOverlap(bodyA, bodyB, true));
-
-        test.done();
-    },
-
-    differentOrder: function(test){
-        bodyA.addShape(new Box({ width: 1, height: 1 }));
-        bodyB.addShape(new Circle({ radius: 1 }));
-
-        test.ok(narrowphase.bodiesOverlap(bodyA, bodyB, true));
-        test.ok(narrowphase.bodiesOverlap(bodyB, bodyA, true));
-
-        test.done();
-    }
-
-};
-
-*/

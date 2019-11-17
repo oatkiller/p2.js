@@ -129,7 +129,7 @@ var bodiesOverlap_shapePositionB = createVec2();
  * @param  {Body} bodyA
  * @param  {Body} bodyB
  * @param  {boolean} [checkCollisionMasks=false]
- * @return {Boolean}
+ * @return {(Boolean|undefined)} Returns undefined when collision groups or masks don't match
  * @memberof Narrowphase
  * @instance
  */
